@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 // import './App.css';
 import SignInAndSignUpPage from './pages/Sign-in-sign-up';
 import { auth } from './firebase/Firebase.utils';
@@ -29,6 +28,7 @@ componentWillUnmount() {
   render() {
     return (
       <div className="App">
+        <Header />
         <SignInAndSignUpPage />
       </div>
     );

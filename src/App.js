@@ -1,27 +1,38 @@
 import logo from './logo.svg';
 // import './App.css';
 import SignInAndSignUpPage from './pages/Sign-in-sign-up';
+import { auth } from './firebase/Firebase.utils';
+import React from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      {/* <header className="App-header"> */}
-        {/* <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> */}
-      {/* </header> */}
-      <SignInAndSignUpPage />
-    </div>
-  );
+class App extends React.Component {
+  constructor() {
+    super();
+    // to update us on when authentication state changes
+    this.state = {
+      currentUser: null
+    }
+}
+
+unsubscribeFromAuth = null
+
+componentDidMount() {
+  // subscriber to listen to auth state change -- allots for OAuth sign in while component is mounted
+  this.unsubscribeFromAuth = auth.onAuthStateChanged(user => {
+    this.setState({ currentUser: user });
+    console.log(user);
+  })
+}
+componentWillUnmount() {
+  this.unsubscribeFromAuth();
+}
+
+  render() {
+    return (
+      <div className="App">
+        <SignInAndSignUpPage />
+      </div>
+    );
+  }
 }
 
 export default App;

@@ -54,7 +54,7 @@ handleChange = (e) => {
             required 
           />
         
-          <button type="submit" variant="primary" value="Submit Form">Submit</button>
+          <input type="submit" value="Submit Form"></input>
         </form>
       </div>
     )

@@ -1,4 +1,4 @@
-// import './App.css';
+import './App.css';
 import SignInAndSignUpPage from './pages/Sign-in-sign-up';
 import { auth } from './firebase/Firebase.utils';
 import React from 'react';

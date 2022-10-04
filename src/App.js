@@ -1,6 +1,6 @@
 import './App.css';
 import SignInAndSignUpPage from './pages/Sign-in-sign-up';
-import { auth } from './firebase/Firebase.utils';
+import { auth, createUserProfileDocument } from './firebase/Firebase.utils';
 import React from 'react';
 import {Header} from './components/common/Header';
 
@@ -17,8 +17,9 @@ unsubscribeFromAuth = null
 
 componentDidMount() {
   // subscriber to listen to auth state change -- allots for OAuth sign in while component is mounted
-  this.unsubscribeFromAuth = auth.onAuthStateChanged(user => {
-    this.setState({ currentUser: user });
+  this.unsubscribeFromAuth = auth.onAuthStateChanged(async user => {
+    createUserProfileDocument(user);
+    // this.setState({ currentUser: user });
     console.log("Welcome", user.displayName);
   })
 }

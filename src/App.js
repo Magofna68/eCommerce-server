@@ -2,7 +2,7 @@
 import SignInAndSignUpPage from './pages/Sign-in-sign-up';
 import { auth } from './firebase/Firebase.utils';
 import React from 'react';
-import Header from './components/common/Header';
+import {Header} from './components/common/Header';
 
 class App extends React.Component {
   constructor() {
@@ -19,7 +19,7 @@ componentDidMount() {
   // subscriber to listen to auth state change -- allots for OAuth sign in while component is mounted
   this.unsubscribeFromAuth = auth.onAuthStateChanged(user => {
     this.setState({ currentUser: user });
-    console.log(user);
+    console.log("Welcome", user.displayName);
   })
 }
 componentWillUnmount() {
@@ -29,7 +29,7 @@ componentWillUnmount() {
   render() {
     return (
       <div className="App">
-        <Header />
+        <Header currentUser={this.state.currentUser}/>
         <SignInAndSignUpPage />
       </div>
     );

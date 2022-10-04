@@ -3,6 +3,7 @@ import SignInAndSignUpPage from './pages/Sign-in-sign-up';
 import { auth, createUserProfileDocument } from './firebase/Firebase.utils';
 import React from 'react';
 import {Header} from './components/common/Header';
+import HomePage from './pages/home/HomePage';
 
 class App extends React.Component {
   constructor() {
@@ -46,6 +47,7 @@ componentWillUnmount() {
       <div className="App">
         <Header currentUser={this.state.currentUser}/>
         <SignInAndSignUpPage />
+        <HomePage />
       </div>
     );
   }

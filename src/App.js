@@ -2,6 +2,7 @@
 import SignInAndSignUpPage from './pages/Sign-in-sign-up';
 import { auth } from './firebase/Firebase.utils';
 import React from 'react';
+import Header from './components/common/Header';
 
 class App extends React.Component {
   constructor() {

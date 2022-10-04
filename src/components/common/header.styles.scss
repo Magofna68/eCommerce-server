@@ -1,0 +1,99 @@
+.header {
+  margin-top: 20px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+
+  // display: block;
+  // width: 100vw;
+  // height: 10vh;
+  // display: flex;
+  // flex-direction: row;
+  // align-items: flex-end;
+  // justify-content: space-between;
+  // background-color: blue;
+}
+  
+  .header-top{
+    display: flex;
+    width: 100%;
+    height: 70px;
+
+    // position: relative;
+    // height: 10vh;
+    // float: right;
+    // flex: 1;
+    // background: yellow;
+    // text-decoration: 1px solid underline;
+    // color: black;
+  }
+  
+  .header-top_logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // margin-right: 20px;
+    
+    // float: left;
+    // position: absolute;
+    // width: 20vw;
+    // flex-direction: row;
+    // left: 0;
+    // background-color: green;
+    // flex: 2;
+    // font-weight: bolder;
+    // font-size: 50px;
+    // font-family: 'Courier New';
+  }
+
+  .header-top_navbar {
+    width: 80%;
+    // display: flex;
+    justify-content: center;
+    // align-items: center;
+  }
+
+  .header-logo {
+    color: inherit;
+    text-decoration: inherit;
+    font-family:'Courier New';
+    font-size: 100px;
+  }
+
+  .header-top_separator {
+    width: 100%;
+    border: none;
+    height: 2px;
+    margin-top: 2px;
+    background-color: black;
+  }
+
+.header-bottom {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: -5px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  
+
+  // display:flex;
+  // flex-direction: row;
+  // background: pink;
+  // width: 40vw;
+  // height: auto;
+  // justify-content: space-between;
+  // align-items: flex-end;
+  // font-size: small;
+  // float: right;
+  
+  .header-bottom_phone{
+    margin-right: 65px;
+  }
+  
+  .header-bottom_email{
+    margin-right: 55px;
+  }
+}

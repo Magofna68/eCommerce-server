@@ -18,7 +18,6 @@ handleSubmit = (event) => {
   event.preventDefault();
   const { email, password } = event.target;
   console.log({email, password});
-  // this.setState({email: ''}, {password: ''});
   this.setState({email: "", password: ""});
   console.log("form submitted", {email, password});
 }
@@ -31,6 +30,14 @@ handleChange = (e) => {
   this.setState({[name]: value})
 }
 
+// handleClick = (e) => {
+
+//   if () {
+//     return;
+//   } else {
+//     window.location.href='#home';
+//   }
+// }
   render() {
     return (
       <div className='sign-in'>

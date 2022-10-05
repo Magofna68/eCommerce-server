@@ -1,16 +1,22 @@
-import './App.css';
-import SignInAndSignUpPage from './pages/Sign-in-sign-up';
-import { auth, createUserProfileDocument } from './firebase/Firebase.utils';
 import React from 'react';
+
+// import Navbar from 'react-bootstrap/Navbar';
+// import Nav from 'react-bootstrap/esm/Nav';
+// import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+
+import { auth, createUserProfileDocument } from './firebase/Firebase.utils';
+
+import './App.scss';
+// import SignInAndSignUpPage from './pages/Sign-in-sign-up';
 import {Header} from './components/common/Header';
-import HomePage from './pages/home/HomePage';
+// import HomePage from './pages/home/HomePage';
 
 class App extends React.Component {
   constructor() {
     super();
     // to update us on when authentication state changes
     this.state = {
-      currentUser: null
+      currentUser: null,
     }
 }
 
@@ -46,12 +52,30 @@ componentWillUnmount() {
 
   render() {
     return (
-      <div className="App">
-        <Header currentUser={this.state.currentUser}/>
-        <SignInAndSignUpPage />
-        <HomePage />
+      // <Router>
+      //   <Navbar className='border-bottom' bg="transparent" expand="lg">
+      //     <Nav className='ml-auto'>
+      //     <Link className="nav-link" to="/">Home</Link>
+      //     <Link className="nav-link" to="/signin">Sign In</Link>
+      //     </Nav>
+      //   </Navbar>
+      //   <Routes>
+      //     <Route path='/signin' exact element={[<Header currentUser={this.state.currentUser}/>, <SignInAndSignUpPage />]}></Route>
+      //     <Route path="/" exact element={<HomePage title={this.state.home.title}></HomePage>}></Route>
+        
+      //   </Routes>
+      // </Router>
+
+
+      // <div className="App">
+      //   <Header currentUser={this.state.currentUser}/>
+      //   <SignInAndSignUpPage />
+      //   <HomePage />
+      // </div>
+      <div>
+        hello
       </div>
-    );
+    )
   }
 }
 

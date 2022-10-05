@@ -71,7 +71,7 @@ export default class SignUp extends React.Component {
             required
           />
           <FormInput
-            type=""
+            type="password"
             name='password'
             value={password}
             onChange={this.handleChange}

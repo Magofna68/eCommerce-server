@@ -7,8 +7,8 @@ import React from 'react';
 import { auth, createUserProfileDocument } from './firebase/Firebase.utils';
 
 import './App.scss';
-// import SignInAndSignUpPage from './pages/Sign-in-sign-up';
-import {Header} from './components/common/Header';
+import SignInAndSignUpPage from './pages/Sign-in-sign-up';
+import {Header} from '../src/components/common/Header';
 // import HomePage from './pages/home/HomePage';
 
 class App extends React.Component {
@@ -23,6 +23,7 @@ class App extends React.Component {
 unsubscribeFromAuth = null
 
 componentDidMount() {
+  console.log("componentDidMount Hit")
   // subscriber to listen to auth state change -- allots for OAuth sign in while component is mounted
   this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
     if (userAuth) {
@@ -67,13 +68,9 @@ componentWillUnmount() {
       // </Router>
 
 
-      // <div className="App">
-      //   <Header currentUser={this.state.currentUser}/>
-      //   <SignInAndSignUpPage />
-      //   <HomePage />
-      // </div>
-      <div>
-        hello
+      <div className="App">
+        <Header currentUser={this.state.currentUser}/>
+        {/* <SignInAndSignUpPage /> */}
       </div>
     )
   }

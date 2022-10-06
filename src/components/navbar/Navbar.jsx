@@ -21,22 +21,30 @@ export default function Navigationbar({currentUser}) {
   return (
         <Router>
           <Container className='p-0' fluid={true}>
-            <Navbar className='border-bottom' bg="light" expand="lg">
+            <Navbar className='border' bg="transparent" expand="sm">
              <Navbar.Brand href="#home">
-               {/* <Link className='logo' to='/'>LOGO</Link> */}
+               <Link className='logo' to='/'>LOGO</Link>
              </Navbar.Brand>
              <NavbarToggle className='border-0' aria-controls="navbar-toggle" />
-             <NavbarCollapse id="navbar-toggle">
-               <Nav className='me-auto'>
+             <NavbarCollapse className='justify-content-end navbar-toggle'>
+               <Nav className='ml-auto'>
                {/* <Link className="nav-link" to="/">Sign In</Link> */}
                <Link className="nav-link" to="/home">Home</Link>
                <Link className='nav-link' to="/shop">Shop</Link>
                <Link className='nav-link' to='/about'>About</Link>
              {
-                currentUser ? 
+               currentUser ? 
+               <div>
                 <Link className="nav-link" to='/' onClick={()=> auth.signOut(console.log("Goodbye"))}>Sign Out</Link>
+                </div>
                 :
                 <Link className="nav-link" to='/signin'>Sign In</Link>
+              }
+              {
+               currentUser ?
+               <Navbar.Text><span className="navbar-text">Signed in as: <br/>{currentUser.displayName}</span></Navbar.Text>
+               :
+               <Navbar.Text><span className="navbar-text">Have an account?</span></Navbar.Text>
               }
               </Nav>
             </NavbarCollapse>

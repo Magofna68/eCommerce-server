@@ -19,11 +19,11 @@ import { auth } from '../../firebase/Firebase.utils';
 export const Header = ({currentUser}) => (
     <section className='header'>
       <section className='header-top'>
-        <section className='header-top_logo'>
-          <a href='/' className='header-logo'>LOGO</a>
-        </section>
-        <section className='header-top_navbar '>
           <Navigationbar currentUser = {currentUser} />
+        {/* <section className='header-top_logo'>
+          <a href='/' className='header-logo'>LOGO</a>
+        </section> */}
+        <section className='header-top_navbar '>
             {/* <section className="Navbar">
               <a href="#home" className="navbar-item">Home</a>
               <a href="/about" className="navbar-item">About</a>
@@ -47,6 +47,14 @@ export const Header = ({currentUser}) => (
         <section className='header-bottom_email'>
           Magofna68@gmail.com
         </section>
+        {/* <section>
+          {
+            currentUser ?
+            <span className='header-text'>Signed in as: {currentUser.displayName}</span>
+            :
+            <span className='header-text'>Have an account?</span>
+          }
+        </section> */}
       </section >
     </section>
 );

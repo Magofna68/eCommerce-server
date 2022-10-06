@@ -1,0 +1,31 @@
+// .nav .link {
+//   background-color: gray;
+//   color: black;
+// }
+
+.navbar-brand {
+  color: black;
+  border: bottom;
+  border-color: white;
+  font-size: 30px;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+a.nav-link {
+  text-transform: uppercase;
+  margin: 0 10px;
+
+  &:hover {
+    transform: scale(1.05);
+    color: black;
+  }
+}
+
+.navbar-text {
+  font-size: 10px;
+  justify-content: baseline;
+  margin-right: 5px;
+}

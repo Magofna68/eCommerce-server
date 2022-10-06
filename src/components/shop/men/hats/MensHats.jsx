@@ -1,12 +1,22 @@
 import React from 'react'
 import { mensHats } from '../../../../data';
-import { Card, Container } from 'react-bootstrap';
+import { Card, Container, Row } from 'react-bootstrap';
+import './mensHats.styles.scss';
 
 export default function MensHats() {
   return (
     <Container fluid className='mens-container'>
+      <Row>
+      <h2>Featured</h2>
+      </Row>
+      <div className='mens-hat-container'>
       {mensHats.map((item) => (
-        <Card class='img-responsive'>
+        <Card 
+          class='img-responsive'
+          // styles={{
+          //   width: '300px'
+          // }}
+        >
           <Card.Img
             variant='top'
             src={item.img}
@@ -21,6 +31,7 @@ export default function MensHats() {
         </Card>
         )
       )}
+      </div>
   </Container>
   )
 }

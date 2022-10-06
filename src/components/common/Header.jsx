@@ -5,7 +5,7 @@ import './header.styles.scss';
 // import HomePage from '../../pages/home/HomePage';
 // import ShopPage from '../../pages/shop/ShopPage';
 // import AboutPage from '../../pages/about/AboutPage';
-import { auth } from '../../firebase/Firebase.utils';
+// import { auth } from '../../firebase/Firebase.utils';
 
 // import SignInAndSignUpPage from '../../pages/Sign-in-sign-up';
 // import NavbarToggle from 'react-bootstrap/esm/NavbarToggle';

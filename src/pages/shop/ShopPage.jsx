@@ -2,18 +2,22 @@ import React, { Component } from 'react';
 import './shopPage.styles.scss';
 import MensHats from '../../components/shop/men/hats/Hats';
 import WomensHats from '../../components/shop/women/hats/Hats';
-import { Container, Row } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 
 class ShopPage extends Component {
   render() {
     return (
-      <Container className='shop-page'>
-        <h2>
-          Welcome to the Shop Page
-        </h2>
+      <Container fluid className='shop-page'>
         <Row>
-        <MensHats />
-        <WomensHats />
+          <Col>
+            <h2>
+              Welcome to the Shop Page
+            </h2>
+          </Col>
+        </Row>
+        <Row>
+          <MensHats />
+          <WomensHats />
         </Row>
       </Container>
     );

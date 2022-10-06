@@ -1,0 +1,10 @@
+.mens-container {
+  display: flex;
+  // flex: 1;
+  width: 45vw;
+  flex-direction: row;
+}
+
+.card {
+  max-width: 200px;
+}

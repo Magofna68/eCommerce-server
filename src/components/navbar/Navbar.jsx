@@ -1,13 +1,13 @@
 import './navbar.styles.scss';
 
-import SignInAndSignUpPage from '../../pages/Sign-in-sign-up';
+import SignInAndSignUpPage from '../../pages/signinPage/Sign-in-sign-up';
 import NavbarToggle from 'react-bootstrap/esm/NavbarToggle';
 import NavbarCollapse from 'react-bootstrap/esm/NavbarCollapse';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/esm/Nav';
-import ShopPage from '../../pages/shop/ShopPage';
-import AboutPage from '../../pages/about/AboutPage';
-import HomePage from '../../pages/home/HomePage';
+import ShopPage from '../../pages/shopPage/ShopPage';
+import AboutPage from '../../pages/aboutPage/AboutPage';
+import HomePage from '../../pages/homePage/HomePage';
 
 import { auth } from '../../firebase/Firebase.utils';
 

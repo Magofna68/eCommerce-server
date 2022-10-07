@@ -7,7 +7,7 @@ import React from 'react';
 import { auth, createUserProfileDocument } from './firebase/Firebase.utils';
 
 import './App.scss';
-import SignInAndSignUpPage from './pages/Sign-in-sign-up';
+// import SignInAndSignUpPage from './pages/signinPage/Sign-in-sign-up';
 import {Header} from './components/utility/header/Header';
 // import HomePage from './pages/home/HomePage';
 

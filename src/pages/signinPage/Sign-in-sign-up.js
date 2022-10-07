@@ -2,8 +2,8 @@ import React from 'react';
 
 import './sign-in-sign-up.syles.scss';
 
-import SignIn from '../components/sign-in/Sign-in';
-import SignUp from '../components/sign-up/Sign-up';
+import SignIn from '../../components/sign-in/Sign-in';
+import SignUp from '../../components/sign-up/Sign-up'
 
 const SignInAndSignUpPage = () => (
   <div className='sign-in-and-sign-up'>

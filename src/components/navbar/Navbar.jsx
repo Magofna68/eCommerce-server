@@ -41,7 +41,7 @@ export default function Navigationbar({currentUser}) {
                 <Link className="nav-link" to='/signin'>Sign In</Link>
               }
               {
-               currentUser ?
+                currentUser ?
                <Navbar.Text><span className="navbar-text">Signed in as: <br/>{currentUser.displayName}</span></Navbar.Text>
                :
                <Navbar.Text><span className="navbar-text">Have an account?</span></Navbar.Text>

@@ -1,7 +1,7 @@
 import React, { Component, setState } from 'react'
 import './sign-in.styles.scss';
 import FormInput from '../form-input/Form-input';
-import CustomButton from '../custon-button/Custom-button';
+import CustomButton from '../utility/custom-button/Custom-button';
 import { auth, signInWithGoogle } from '../../firebase/Firebase.utils';
 
 export default class SignIn extends React.Component {

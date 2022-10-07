@@ -1,5 +1,5 @@
 import React from 'react';
-import Navigationbar from '../navbar/Navbar.jsx'
+import Navigationbar from '../../navbar/Navbar.jsx'
 
 import './header.styles.scss';
 // import HomePage from '../../pages/home/HomePage';

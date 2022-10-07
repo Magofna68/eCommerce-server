@@ -8,7 +8,7 @@ import { auth, createUserProfileDocument } from './firebase/Firebase.utils';
 
 import './App.scss';
 import SignInAndSignUpPage from './pages/Sign-in-sign-up';
-import {Header} from '../src/components/common/Header';
+import {Header} from './components/utility/header/Header';
 // import HomePage from './pages/home/HomePage';
 
 class App extends React.Component {

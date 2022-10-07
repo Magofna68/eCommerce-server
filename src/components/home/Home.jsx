@@ -14,7 +14,7 @@ class HomePage extends React.Component {
   render() {
     return (
       <div id="home">
-        Welcome Home.
+        <h2>Shop Now and Save!</h2>
         <CarouselComponent dataSet={mensHats}/>
       
     {/* <Carousel>

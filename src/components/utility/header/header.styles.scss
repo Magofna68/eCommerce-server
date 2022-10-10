@@ -55,6 +55,27 @@
 //     background-color: black;
 //   }
 
+.banner {
+  width: 100vw;
+  max-height: 200px;
+  display: flex;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+
+  img{
+    max-width: 80%;
+    max-height: 200px;
+  }
+
+  h3{
+    position: absolute;
+    bottom: 0;
+    left: 20;
+    color: white;
+  }
+}
+
 .header-bottom {
   display: flex;
   flex: 1;

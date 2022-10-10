@@ -26,11 +26,13 @@ export default class Directory extends React.Component {
         {
           title: 'mens',
           imageUrl: 'https://dvyvvujm9h0uq.cloudfront.net/com/articles/1597738279-195176-patricia-palma-oaab-eywmuu-unsplashjpg.jpg',
+          size: 'large',
           id: 4
         },
         {
           title: 'womens',
           imageUrl: 'https://static.showit.co/800/pe-Kr33gRQu0n6Aa3jt0FA/25111/a_wachesaw_plantation_high_school_senior_session_by_pasha_belman_photography-26.jpg',
+          size: 'large',
           id: 5
         },
       ]
@@ -39,8 +41,8 @@ export default class Directory extends React.Component {
   render() {
     return (
       <div className='directory-menu'>
-        {this.state.sections.map(({title, imageUrl, id}) => (
-          <MenuItem title={title} key={id} imageUrl={imageUrl} />
+        {this.state.sections.map(({title, imageUrl, id, size }) => (
+          <MenuItem title={title} key={id} imageUrl={imageUrl} size={size} />
         ))}
       </div>
     )

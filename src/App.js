@@ -1,5 +1,5 @@
 import React from 'react';
-import HomePage from './pages/homePage/HomePage';
+// import HomePage from './pages/homePage/HomePage';
 
 // import Navbar from 'react-bootstrap/Navbar';
 // import Nav from 'react-bootstrap/esm/Nav';

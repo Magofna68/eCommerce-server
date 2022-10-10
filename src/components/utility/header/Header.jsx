@@ -25,7 +25,7 @@ export const Header = ({currentUser}) => (
             src={Banner}
             alt="Banner"
           />
-          <h3>Find Your Style</h3>
+          {/* <h3>Find Your Style</h3> */}
         </div>
         </section>
           <section className='header-bottom '>

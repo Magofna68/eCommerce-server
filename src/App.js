@@ -1,17 +1,15 @@
 import React from 'react';
-import { BrowserRouter as Router, useHistory } from 'react-router-dom';
-// import HomePage from './pages/homePage/HomePage';
-
-// import Navbar from 'react-bootstrap/Navbar';
-// import Nav from 'react-bootstrap/esm/Nav';
-// import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
-
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
+import Jackets from './components/shop/category/jackets/Jackets';
+import Hats from './components/shop/category/hats/Hats';
+import Sneakers from './components/shop/category/sneakers/Sneakers';
+import MensClothing from './components/shop/gender/men/MensClothing';
+import WomensClothing from './components/shop/gender/women/WomensClothing';
 import { auth, createUserProfileDocument } from './firebase/Firebase.utils';
 
 import './App.scss';
-// import SignInAndSignUpPage from './pages/signinPage/Sign-in-sign-up';
 import {Header} from './components/utility/header/Header';
-// import HomePage from './pages/home/HomePage';
 
 class App extends React.Component {
   constructor() {
@@ -30,7 +28,6 @@ componentDidMount() {
   this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
     if (userAuth) {
       const userRef = await createUserProfileDocument(userAuth);
-      // var history = useHistory();
       userRef.onSnapshot(snapShot => {
         this.setState({ 
           currentUser: {
@@ -57,26 +54,19 @@ componentWillUnmount() {
   render() {
     return (
       <Router>
-      {/* //   <Navbar className='border-bottom' bg="transparent" expand="lg">
-      //     <Nav className='ml-auto'>
-      //     <Link className="nav-link" to="/">Home</Link>
-      //     <Link className="nav-link" to="/signin">Sign In</Link>
-      //     </Nav>
-      //   </Navbar>
-      //   <Routes>
-      //     <Route path='/signin' exact element={[<Header currentUser={this.state.currentUser}/>, <SignInAndSignUpPage />]}></Route>
-      //     <Route path="/" exact element={<HomePage title={this.state.home.title}></HomePage>}></Route>
-        
-      //   </Routes> */}
-
-
-      <div className="App">
-        <Header currentUser={this.state.currentUser}/>
-        {/* <HomePage /> */}
-      </div>
+        <div className="App">
+          <Header currentUser={this.state.currentUser}/>
+        </div>
+        <Routes>
+          <Route path='/shop/jackets' element={<Jackets />}/>
+          <Route path='/shop/sneakers' element={<Sneakers/>}/>
+          <Route path='/shop/mens' element={<MensClothing />}/>
+          <Route path='/shop/womens' element={<WomensClothing/>}/>
+          <Route path='/shop/hats' element={<Hats/>}/>
+        </Routes>
       </Router>
     )
   }
-}
+};
 
 export default App;

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './shopPage.styles.scss';
-import MensHats from '../../components/shop/men/hats/MensHats';
-import WomensHats from '../../components/shop/women/hats/WomensHats';
+import MensHats from '../../components/shop/gender/men/hats/MensHats';
+import WomensHats from '../../components/shop/gender/women/hats/WomensHats';
 import { Container, Row, Col } from 'react-bootstrap';
 
 class ShopPage extends Component {

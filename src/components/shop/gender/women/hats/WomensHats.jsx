@@ -1,5 +1,5 @@
 import React from 'react'
-import {womensHats} from '../../../../data';
+import {womensHats} from '../../../../../data';
 import { Card, Container } from 'react-bootstrap';
 
 export default function WomensHats() {

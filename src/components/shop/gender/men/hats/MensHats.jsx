@@ -1,5 +1,5 @@
 import React from 'react'
-import { mensHats } from '../../../../data';
+import { mensHats } from '../../../../../data';
 import { Card, Container, Row } from 'react-bootstrap';
 import './mensHats.styles.scss';
 

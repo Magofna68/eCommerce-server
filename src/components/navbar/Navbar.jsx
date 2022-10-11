@@ -29,7 +29,7 @@ export default function Navigationbar({currentUser}) {
              <NavbarCollapse className='justify-content-end navbar-toggle'>
                <Nav className='ml-auto'>
                {/* <Link className="nav-link" to="/">Sign In</Link> */}
-               <Link className="nav-link" to="/home">Home</Link>
+               <Link className="nav-link" to="/">Home</Link>
                <Link className='nav-link' to="/shop">Shop</Link>
                <Link className='nav-link' to='/about'>About</Link>
              {
@@ -53,7 +53,7 @@ export default function Navigationbar({currentUser}) {
           <Routes>
           {/* <Route path='/'>Sign In</Route> */}
             <Route path='/login'  element={<SignInAndSignUpPage/>}></Route>
-            <Route path="/home" exact element={<HomePage />}></Route>
+            <Route path="/" exact element={<HomePage />}></Route>
             <Route path='/shop' element={<ShopPage/>}></Route>
             {/* <Route path='/shop/jackets' component={<Jackets></Jackets>}></Route> */}
             <Route path='/about' component={<AboutPage />}></Route>

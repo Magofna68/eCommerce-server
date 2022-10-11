@@ -4,15 +4,15 @@ import './menu-item.scss';
 // import {useNavigate} from 'react-router';
 import { useNavigate } from 'react-router';
 
-import Jackets from '../shop/jackets/Jackets';
+import Jackets from '../shop/category/jackets/Jackets';
 
- const MenuItem = ({ title, imageUrl, size, history, linkUrl }) => {
- const navigate = useNavigate();
+ const MenuItem = ({ title, imageUrl, size, linkUrl }) => {
+  const navigate = useNavigate();
 
  return (
   <div 
     className={`${size} menu-item`} 
-    onClick={() => navigate('/shop/' + linkUrl)}>
+    onClick={() => navigate('shop/' + linkUrl)}>
     <div 
       className="background-image"
       style={{
@@ -20,10 +20,8 @@ import Jackets from '../shop/jackets/Jackets';
       }}
     />
       <div className='content'>
-        {/* <Link to='/shop/:'> */}
           <h1 className='title'>{title}</h1>
           <span className='subtitle'>SHOP NOW</span>
-        {/* </Link> */}
       </div>
   </div>
  )

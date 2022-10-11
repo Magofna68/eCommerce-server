@@ -19,11 +19,11 @@ import React from 'react'
 
 export default function Navigationbar({currentUser}) {
   return (
-        <Router>
+        // <Router>
           <Container className='p-0' fluid={true}>
             <Navbar className='border' bg="transparent" expand="sm">
              <Navbar.Brand href="#home">
-               <Link className='logo' to='/'>LOGO</Link>
+               <Link className='logo' to='/home'>LOGO</Link>
              </Navbar.Brand>
              <NavbarToggle className='border-0' aria-controls="navbar-toggle" />
              <NavbarCollapse className='justify-content-end navbar-toggle'>
@@ -38,7 +38,7 @@ export default function Navigationbar({currentUser}) {
                 <Link className="nav-link" to='/' onClick={()=> auth.signOut(console.log("Goodbye"))}>Sign Out</Link>
                 </div>
                 :
-                <Link className="nav-link" to='/signin'>Sign In</Link>
+                <Link className="nav-link" to='/login'>Sign In</Link>
               }
               {
                 currentUser ?
@@ -51,13 +51,14 @@ export default function Navigationbar({currentUser}) {
           </Navbar>
 
           <Routes>
-          <Route path='/'>Sign In</Route>
-            <Route path='/signin'  element={<SignInAndSignUpPage />}></Route>
-            <Route path="/home" exact element={<HomePage></HomePage>}></Route>
-            <Route path='/shop' element={<ShopPage />}></Route>
-            <Route path='/about' element={<AboutPage />}></Route>
+          {/* <Route path='/'>Sign In</Route> */}
+            <Route path='/login'  element={<SignInAndSignUpPage/>}></Route>
+            <Route path="/home" exact element={<HomePage />}></Route>
+            <Route path='/shop' element={<ShopPage/>}></Route>
+            {/* <Route path='/shop/jackets' component={<Jackets></Jackets>}></Route> */}
+            <Route path='/about' component={<AboutPage />}></Route>
           </Routes>
         </Container> 
-      </Router>
+      // </Router>
   )
 }

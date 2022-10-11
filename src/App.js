@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, useHistory } from 'react-router-dom';
 // import HomePage from './pages/homePage/HomePage';
 
 // import Navbar from 'react-bootstrap/Navbar';
@@ -29,7 +30,7 @@ componentDidMount() {
   this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
     if (userAuth) {
       const userRef = await createUserProfileDocument(userAuth);
-
+      // var history = useHistory();
       userRef.onSnapshot(snapShot => {
         this.setState({ 
           currentUser: {
@@ -42,6 +43,7 @@ componentDidMount() {
       });
     } else {
       this.setState({currentUser: userAuth});
+      // history.push('/home');
     }
     // createUserProfileDocument(userAuth);
     // this.setState({ currentUser: user });
@@ -54,8 +56,8 @@ componentWillUnmount() {
 
   render() {
     return (
-      // <Router>
-      //   <Navbar className='border-bottom' bg="transparent" expand="lg">
+      <Router>
+      {/* //   <Navbar className='border-bottom' bg="transparent" expand="lg">
       //     <Nav className='ml-auto'>
       //     <Link className="nav-link" to="/">Home</Link>
       //     <Link className="nav-link" to="/signin">Sign In</Link>
@@ -65,14 +67,14 @@ componentWillUnmount() {
       //     <Route path='/signin' exact element={[<Header currentUser={this.state.currentUser}/>, <SignInAndSignUpPage />]}></Route>
       //     <Route path="/" exact element={<HomePage title={this.state.home.title}></HomePage>}></Route>
         
-      //   </Routes>
-      // </Router>
+      //   </Routes> */}
 
 
       <div className="App">
         <Header currentUser={this.state.currentUser}/>
         {/* <HomePage /> */}
       </div>
+      </Router>
     )
   }
 }

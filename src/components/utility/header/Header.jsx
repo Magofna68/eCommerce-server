@@ -1,6 +1,5 @@
 import React from 'react';
 import Navigationbar from '../../navbar/Navbar.jsx'
-import Banner from '../../../assets/Banner.png';
 
 import './header.styles.scss';
 // import HomePage from '../../pages/home/HomePage';
@@ -20,14 +19,9 @@ import './header.styles.scss';
 export const Header = ({currentUser}) => (
     <section className='header'>
       <section className='header-top'>
-      {/* <div className='banner'>
-          <img
-            src={Banner}
-            alt="Banner"
-          />
-        </div> */}
         </section>
           <section className='header-bottom '>
+            <div className='slogan'>Find Your Style</div>
             <section className='header-bottom_phone'>
               503-269-2656
             </section>

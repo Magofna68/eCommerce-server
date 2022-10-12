@@ -1,7 +1,11 @@
 import React from 'react'
+import MensHats from './hats/MensHats'
 
 export default function MensClothing() {
   return (
-    <div>MensClothing Component</div>
+    <div>
+      <h1>MensClothing </h1>
+        <MensHats />
+      </div>
   )
 }

@@ -1,30 +1,31 @@
 import React, { Component } from 'react';
 import './shopPage.styles.scss';
-import MensHats from '../../components/shop/gender/men/hats/MensHats';
-import WomensHats from '../../components/shop/gender/women/hats/WomensHats';
+// import MensHats from '../../components/shop/gender/men/hats/MensHats';
+// import WomensHats from '../../components/shop/gender/women/hats/WomensHats';
 import { Container, Row, Col } from 'react-bootstrap';
+import  SHOP_DATA  from '../../data';
+import CollectionPreview from '../../components/shop/preview-collection/CollectionPreview';
 
 class ShopPage extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
-    this.setState = {
-      itemDetail: false,
-    }
-
-    // if (itemDetail === true) {
-
-    // }
+    this.state = {
+      collections: SHOP_DATA
+    };
   }
 
   render() {
+    const { collections } = this.state;
     return (
-      <Container fluid className='shop-page'>
-        <Row>
-          <MensHats />
-          <WomensHats />
-        </Row>
-      </Container>
+      <div fluid className='shop-page'>
+        <h1>Shop Page</h1>
+        {
+            collections?.map(({id, ...otherCollectionProps})=> (
+            <CollectionPreview key={id} {...otherCollectionProps} />
+          ))
+        }
+      </div>
     );
   }
 }

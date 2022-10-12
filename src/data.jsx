@@ -96,21 +96,21 @@ export const SHOP_DATA = [
         id: 1,
         name: 'Mens Nike Dunk High Retro',
         alt: 'Nike Shoe',
-        img: `url('https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a0374c16-982d-44a8-b791-18d7b47fab9f/dunk-high-retro-mens-shoe-dTVTCk.png')`,
+        img: 'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a0374c16-982d-44a8-b791-18d7b47fab9f/dunk-high-retro-mens-shoe-dTVTCk.png',
         price: '$125'
       },
       {
         id: 2,
         name: 'Air Jordan 6 Retro Low',
         alt: 'Air Jordan Shoe',
-        img: `url('https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,b_rgb:f5f5f5/1f1b7246-1dcd-43de-af62-995320e977ef/air-jordan-6-retro-low-mens-shoes-MPwhfh.png')`,
+        img: 'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,b_rgb:f5f5f5/1f1b7246-1dcd-43de-af62-995320e977ef/air-jordan-6-retro-low-mens-shoes-MPwhfh.png',
         price: '$200'
       },
       {
         id: 3,
         name: 'Vans: Era Core Classics',
         alt: 'Vans Shoe',
-        img: `url('https://m.media-amazon.com/images/I/71b8Cc6XRfL._AC_SR1840,1472__FMwebp_.jpg')`,
+        img: 'https://m.media-amazon.com/images/I/71b8Cc6XRfL._AC_SR1840,1472__FMwebp_.jpg',
         price:'$54.95'
       },
     ],
@@ -124,14 +124,14 @@ export const SHOP_DATA = [
         id: 1,
         name: 'Womens Winter Warmer Coat | Insulated Jacket',
         alt: 'Womens Winter Jacket Model',
-        img: `URL('https://cdni.llbean.net/is/image/wim/271139_0_44?hei=1095&wid=950&resMode=sharp2&defaultImage=llbprod/A0211793_2')`,
+        img: 'https://cdni.llbean.net/is/image/wim/271139_0_44?hei=1095&wid=950&resMode=sharp2&defaultImage=llbprod/A0211793_2',
         price: '$37.99'
       },
       {
         id: 2,
         name: 'Womens Jackets Long-sleeve Printed Fringed Jacket',
         alt: 'Womens Jacket Model',
-        img: `url('https://img-va.myshopline.com/image/store/2000372313/1640572147473/a425b42fb0144dd795cd40fa538010ca_1296x.jpg?w=1100&h=1500')`,
+        img: 'https://img-va.myshopline.com/image/store/2000372313/1640572147473/a425b42fb0144dd795cd40fa538010ca_1296x.jpg?w=1100&h=1500',
         price: '$44.99'
       },
     ]

@@ -18,7 +18,7 @@ class ShopPage extends Component {
   render() {
     const { collections } = this.state;
     return (
-      <div fluid className='shop-page'>
+      <div fluid className='shopPage'>
         {/* <h1>Shop Page</h1> */}
         {
             collections?.map(({id, ...otherCollectionProps})=> (

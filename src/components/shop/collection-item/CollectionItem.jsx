@@ -2,19 +2,20 @@ import './collectionItem.styles.scss';
 import React from 'react';
 
 
-const CollectionItem = ({id, name, price, imageUrl}) => (
-  <div className='collection-item'>
+const CollectionItem = ({id, name, price, img}) => (
+  <div className='collectionItem'>
     <div 
       className='image'
-      styles={{
-        backgroundImage: `url(${imageUrl})`
+      style={{
+        backgroundImage: `url(${img})`
       }}
     />
-    <div className='collection-footer'>
-      <span className='name'>{name}</span>
-      <span className='price'>{price}</span>
+    <div className='collectionFooter'>
+      <span className='name'>{ name }</span>
+      <br/>
+      <span className='price'>{ price }</span>
     </div>
   </div>
-)
+);
 
 export default CollectionItem;

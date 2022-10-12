@@ -20,13 +20,12 @@ import './header.styles.scss';
 export const Header = ({currentUser}) => (
     <section className='header'>
       <section className='header-top'>
-      <div className='banner'>
+      {/* <div className='banner'>
           <img
             src={Banner}
             alt="Banner"
           />
-          {/* <h3>Find Your Style</h3> */}
-        </div>
+        </div> */}
         </section>
           <section className='header-bottom '>
             <section className='header-bottom_phone'>

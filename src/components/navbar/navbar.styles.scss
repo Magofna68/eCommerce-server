@@ -4,9 +4,10 @@
 // }
 
 .navbar-brand {
-  color: black;
-  border: bottom;
-  border-color: white;
+margin-left: 10px;
+max-width: 5%;
+// min-width: 50px;
+height: auto;
   // font-size: 30px;
 }
 
@@ -29,3 +30,9 @@ a.nav-link {
   justify-content: baseline;
   margin-right: 5px;
 }
+h2 {
+  font-weight: 800;
+}
+// .logo {
+//   width: 100px;
+// }

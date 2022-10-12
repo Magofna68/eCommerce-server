@@ -8,6 +8,7 @@ import Nav from 'react-bootstrap/esm/Nav';
 import ShopPage from '../../pages/shopPage/ShopPage';
 import AboutPage from '../../pages/aboutPage/AboutPage';
 import HomePage from '../../pages/homePage/HomePage';
+import Logo from '../../assets/crown.png'
 
 import { auth } from '../../firebase/Firebase.utils';
 
@@ -22,9 +23,17 @@ export default function Navigationbar({currentUser}) {
         // <Router>
           <Container className='p-0' fluid={true}>
             <Navbar className='border' bg="transparent" expand="sm">
-             <Navbar.Brand href="#home">
-               <Link className='logo' to='/home'>LOGO</Link>
+             <Navbar.Brand href="/" className='logo'>
+                <img 
+                  src={Logo} 
+                  style={{
+                    borderRadius: '5px'
+                  }}
+                  width='100%' 
+                  alt='logo'>
+                </img>
              </Navbar.Brand>
+             <h2 className='w3-monospace'>Underground ROYALTY</h2>
              <NavbarToggle className='border-0' aria-controls="navbar-toggle" />
              <NavbarCollapse className='justify-content-end navbar-toggle'>
                <Nav className='ml-auto'>

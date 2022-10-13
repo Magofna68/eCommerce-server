@@ -2,12 +2,13 @@ import './collectionItem.styles.scss';
 import React from 'react';
 
 
-const CollectionItem = ({id, name, price, img}) => (
+const CollectionItem = ({id, name, price, img, img2}) => (
   <div className='collectionItem'>
     <div 
       className='image'
       style={{
-        backgroundImage: `url(${img})`
+        backgroundImage: `url(${img})`,
+        onMouseOver: `url(${img2})`
       }}
     />
     <div className='collectionFooter'>

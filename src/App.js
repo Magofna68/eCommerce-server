@@ -10,8 +10,6 @@ import { auth, createUserProfileDocument } from './firebase/Firebase.utils';
 
 import './App.scss';
 import {Header} from './components/utility/header/Header';
-import { MENS_SHOP_DATA, WOMENS_SHOP_DATA } from './data';
-import CollectionPreview from './components/shop/preview-collection/CollectionPreview';
 
 class App extends React.Component {
   constructor() {
@@ -19,8 +17,6 @@ class App extends React.Component {
     // to update us on when authentication state changes
     this.state = {
       currentUser: null,
-      womensCollections: WOMENS_SHOP_DATA,
-      mensCollections: MENS_SHOP_DATA
     }
 }
 
@@ -56,16 +52,6 @@ componentWillUnmount() {
 }
 
   render() {
-    // const { mensCollections, womensCollections } = this.state;
-    // return(
-    //   <div>
-    //     {
-    //       mensCollections.map(({id, ...otherCollectionProps}) => {
-    //         return (
-    //         <CollectionPreview key={id} {...otherCollectionProps} />
-    //         )})
-    //     }
-    //   </div>
 
     return (
       <Router>

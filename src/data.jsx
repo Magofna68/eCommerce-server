@@ -41,6 +41,38 @@ export const SHOP_DATA = [
         alt: 'Mens Dress Shoe',
         img: 'https://cdnimg.brunomarcshoes.com/brunomarcshoes/product/product/2022-09-19/9065/10:06--1.jpg',
         price: '$42.99'
+      },
+      {
+        id: 5,
+        name: 'Women\'s Catiba Pro',
+        alt: 'Off-white Vintage Gum Sole shoe',
+        img: 'https://cdn.shopify.com/s/files/1/2495/5044/products/catiba-catiba-pro-off-white-sneaker-canvas.slideshow3_1458c07d-fd02-4af5-be0e-74ae47c7be07.jpg?v=1624857339',
+        img2: 'https://cdn.shopify.com/s/files/1/2495/5044/products/catiba-catiba-pro-off-white-sneaker-canvas.slideshow1_e7855403-f774-4faa-a049-c0d2b1857b09.jpg?v=1624857339',
+        price: '$89',
+      },
+      {
+        id: 6,
+        name: 'Women\'s Chuck Taylor All-Star Lift',
+        alt: 'Lifted Black Converse with White Sole',
+        img: 'https://www.converse.com/dw/image/v2/BCZC_PRD/on/demandware.static/-/Sites-cnv-master-catalog/default/dw3d987bc4/images/a_107/560845C_A_107X1.jpg?sw=964',
+        img2: 'https://www.converse.com/dw/image/v2/BCZC_PRD/on/demandware.static/-/Sites-cnv-master-catalog/default/dw3476d3b3/images/c_107/560845C_C_107X1.jpg?sw=2000',
+        price: '$75',
+      },
+      {
+        id: 7,
+        name: 'Women\'s Adidas Swift Running Shoe',
+        alt: 'Original Swift Running Shoe',
+        img: 'https://m.media-amazon.com/images/I/71CFoM4M0-L._AC_SX695._SX._UX._SY._UY_.jpg',
+        img2: 'https://m.media-amazon.com/images/I/81ew2IgxrGL._AC_SX695._SX._UX._SY._UY_.jpg',
+        price: '$89',
+      },
+      {
+        id: 8,
+        name: 'Women\'s Nike Revolution 5',
+        alt: 'Black and White Running Shoes',
+        img: 'https://m.media-amazon.com/images/I/512tsZixA4L._AC_UX695_.jpg',
+        img2: 'https://m.media-amazon.com/images/I/51-jt4VR-sL._AC_UX695_.jpg',
+        price: '$89.99',
       }
     ],
   },
@@ -224,6 +256,38 @@ export const SHOP_DATA = [
         img: 'https://fanatics.frgimages.com/cincinnati-bengals/mens-nike-joe-mixon-black-cincinnati-bengals-legend-jersey_pi4059000_altimages_ff_4059559-367f39bca1048a771872alt2_full.jpg?_hv=2&w=900',
         img2: 'https://fanatics.frgimages.com/cincinnati-bengals/mens-nike-joe-mixon-black-cincinnati-bengals-legend-jersey_pi4059000_altimages_ff_4059559-367f39bca1048a771872alt3_full.jpg?_hv=2&w=900',
         price: '$99',
+      },
+      {
+        id: 5,
+        name: 'Women\'s Chargers NFL Nike Jersey',
+        alt: 'Chargers NFL Home Jersey',
+        img: 'https://fanatics.frgimages.com/los-angeles-chargers/womens-nike-justin-herbert-powder-blue-los-angeles-chargers-game-jersey_pi3911000_altimages_ff_3911893-6d26fc46bc56f4fdb2bcalt2_full.jpg?_hv=2&w=900',
+        img2: 'https://fanatics.frgimages.com/los-angeles-chargers/womens-nike-justin-herbert-powder-blue-los-angeles-chargers-game-jersey_pi3911000_altimages_ff_3911893-6d26fc46bc56f4fdb2bcalt3_full.jpg?_hv=2&w=900',
+        price: '$129'
+      },
+      {
+        id: 6,
+        name: 'Women\'s Pro Choice Tee',
+        alt: 'Feminism Shirt',
+        img: 'https://i.ebayimg.com/images/g/pMIAAOSw32dixu~~/s-l300.jpg',
+        img2: 'https://i.ebayimg.com/images/g/uukAAOSw7lRixvAS/s-l300.jpg',
+        price: '$17.99'
+      },
+      {
+        id: 7,
+        name: 'Women\'s Classic Denim',
+        alt: 'Classic Long Sleeve Denim',
+        img: 'https://i5.walmartimages.com/asr/b6caa34c-ab70-471e-a5ec-280355f786dc.41023d3576fab5ecbc91fb32056b8e00.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF',
+        img2: 'https://i5.walmartimages.com/asr/ce4de04c-5ae1-4aae-9f42-009b553c7fc8.d9942e1476445df8f57ff11515091a13.jpeg',
+        price: '$36'
+      },
+      {
+        id: 8,
+        name: 'Women\'s Evil Natural Tee',
+        alt: 'Creme Melodie T-Shirt',
+        img: 'https://scene7.zumiez.com/is/image/zumiez/product_main_medium_2x/Melodie-Evil-Natural-T-Shirt-_332986-front-US.jpg',
+        img2: 'https://scene7.zumiez.com/is/image/zumiez/product_main_medium_2x/Melodie-Evil-Natural-T-Shirt-_332986-back-US.jpg',
+        price: '$31.95'
       }
     ]
   }

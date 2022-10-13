@@ -1,10 +1,7 @@
 
 .slogan{
-  // width: 100vw;
   background: black;
   display: flex;
-  // justify-content: flex-start;
-  // align-items: flex-start;
   flex: 1;
   margin-left: 3%;
 }
@@ -33,28 +30,3 @@
 .header-text {
   font-size: 10px;
 }
-
-// .Navbar {
-//   display: flex;
-//   justify-content: flex-end;
-//   height: 60px;
-// }
-
-// .navbar-item {
-//   align-items: center;
-//   display: flex;  
-//   justify-content: space-around;
-//   text-transform: uppercase;
-//   color: inherit;
-//   text-decoration: none;
-//   font-weight: bold;
-//   margin: 0 20px;
-//   padding-bottom: 0;
-//   cursor: pointer;
-//   color: grey;
-
-//   &:hover {
-//     color: black;
-//    transform: scale(1.05);
-//   }
-// }

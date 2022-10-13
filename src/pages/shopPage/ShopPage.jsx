@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import './shopPage.styles.scss';
-// import MensHats from '../../components/shop/gender/men/hats/MensHats';
-// import WomensHats from '../../components/shop/gender/women/hats/WomensHats';
-import { Container, Row, Col } from 'react-bootstrap';
+// import { Container, Row, Col } from 'react-bootstrap';
 import  SHOP_DATA  from '../../data';
 import CollectionPreview from '../../components/shop/preview-collection/CollectionPreview';
 

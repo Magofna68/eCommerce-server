@@ -1,6 +1,7 @@
 import React from 'react'
 import SHOP_DATA from '../../../../data'
-import CollectionPreview from '../../preview-collection/CollectionPreview';
+// import CollectionPreview from '../../preview-collection/CollectionPreview';
+import RenderFullCollection from '../render-full-collection/RenderFullCollection';
 
 export default function Hats() {
   const hatCollection = [];
@@ -8,10 +9,15 @@ export default function Hats() {
   console.log({hatCollection})
 
   return (
-    <div>Hats Component test
+    <div
+      style={{
+        display: 'flex',
+      }}
+    >
+      <h1>{hatCollection.title}</h1>
       {
         hatCollection.map(({id, ...otherCollectionProps}) => (
-          <CollectionPreview key={id} {...otherCollectionProps} />
+          <RenderFullCollection key={id} {...otherCollectionProps} />
         ))
       };
     </div>

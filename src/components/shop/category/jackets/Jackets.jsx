@@ -1,7 +1,6 @@
 import React from 'react'
-import { Routes, Route } from 'react-router-dom';
 import SHOP_DATA from '../../../../data';
-import CollectionPreview from '../../preview-collection/CollectionPreview';
+import RenderFullCollection from '../render-full-collection/RenderFullCollection';
 
 export default function Jackets({id, ...otherCollectionProps}) {
   const jacketCollection = [];
@@ -10,7 +9,7 @@ export default function Jackets({id, ...otherCollectionProps}) {
     <div>
       {
         jacketCollection.map(({id, ...otherCollectionProps}) => (
-          <CollectionPreview key={id} {...otherCollectionProps} />
+          <RenderFullCollection key={id} {...otherCollectionProps} />
         ))
       }
     </div>

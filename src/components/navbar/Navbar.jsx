@@ -6,7 +6,7 @@ import NavbarCollapse from 'react-bootstrap/esm/NavbarCollapse';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/esm/Nav';
 import ShopPage from '../../pages/shopPage/ShopPage';
-import AboutPage from '../../pages/aboutPage/AboutPage';
+import ContactPage from '../../pages/contactPage/ContactPage';
 import HomePage from '../../pages/homePage/HomePage';
 import Logo from '../../assets/crown.png'
 
@@ -40,7 +40,7 @@ export default function Navigationbar({currentUser}) {
                {/* <Link className="nav-link" to="/">Sign In</Link> */}
                <Link className="nav-link" to="/">Home</Link>
                <Link className='nav-link' to="/shop">Shop</Link>
-               <Link className='nav-link' to='/about'>About</Link>
+               <Link className='nav-link' to='/contact'>contact</Link>
              {
                currentUser ? 
                <div>
@@ -65,7 +65,7 @@ export default function Navigationbar({currentUser}) {
             <Route path="/" exact element={<HomePage />}></Route>
             <Route path='/shop' element={<ShopPage/>}></Route>
             {/* <Route path='/shop/jackets' component={<Jackets></Jackets>}></Route> */}
-            <Route path='/about' component={<AboutPage />}></Route>
+            <Route path='/contact' element={<ContactPage />}></Route>
           </Routes>
         </Container> 
       // </Router>

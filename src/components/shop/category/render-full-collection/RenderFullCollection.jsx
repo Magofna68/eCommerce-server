@@ -2,6 +2,7 @@ import React from 'react'
 import FullCollectionItem from '../full-collection-item/FullCollectionItem';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 
 export const RenderFullCollection = ({title, items}) => (
@@ -22,23 +23,25 @@ export const RenderFullCollection = ({title, items}) => (
           {title.toUpperCase()}
         </h1>
       </Row>
-      {/* <Row> */}
-      <div 
-        className='preview'
-        style={{ 
-          flexWrap: 'wrap',
-          display: 'flex',
-          alignContent: 'center',
-          justifyContent: 'center',
-        }}
-      >
-        {
-          items.map(({id, ...otherItemProps}) => (
-            <FullCollectionItem key={id} {...otherItemProps} />
-          ))
-        };
-      </div>
-    {/* </Row> */}
+      {/* <Row m={12}>
+        <Col> */}
+          <div 
+            className='preview'
+            style={{ 
+              flexWrap: 'wrap',
+              display: 'flex',
+              alignContent: 'center',
+              justifyContent: 'center',
+            }}
+            >
+            {
+              items.map(({id, ...otherItemProps}) => (
+                <FullCollectionItem key={id} {...otherItemProps} />
+                ))
+              };
+          </div>
+        {/* </Col>
+    </Row> */}
     {/* </div> */}
   </Container>
 )

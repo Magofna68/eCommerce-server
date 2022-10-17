@@ -1,10 +1,17 @@
 import React from 'react'
 import './collectionPreview.styles.scss'
 import CollectionItem from '../collection-item/CollectionItem';
+import { useNavigate } from 'react-router';
 
-export const CollectionPreview = ({title, items}) => (
+// const navigate = useNavigate()
+
+export const CollectionPreview = ({title, items, routeName}) => (
     <div className='collectionPreview'>
-      <h1 className='title'>{title.toUpperCase()}</h1>
+      <h1 
+        className='title'
+      >
+        {title.toUpperCase()}
+      </h1>
       <div className='preview'>
         {items
           // limit to only 4 items to display; gets rerendered with component

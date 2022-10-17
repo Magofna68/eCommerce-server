@@ -1,15 +1,18 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Route, Routes } from 'react-router-dom';
+
+import './App.scss';
 import Jackets from './components/shop/category/jackets/Jackets';
 import Hats from './components/shop/category/hats/Hats';
 import Sneakers from './components/shop/category/sneakers/Sneakers';
 import MensClothing from './components/shop/gender/men/MensClothing';
 import WomensClothing from './components/shop/gender/women/WomensClothing';
+import {Header} from './components/utility/header/Header';
+
 import { auth, createUserProfileDocument } from './firebase/Firebase.utils';
 
-import './App.scss';
-import {Header} from './components/utility/header/Header';
+
 
 class App extends React.Component {
   constructor() {
@@ -28,15 +31,17 @@ componentDidMount() {
   this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
     if (userAuth) {
       const userRef = await createUserProfileDocument(userAuth);
+      // onSnapShot is equivalent to onAuthStateChange -- built in method from firebase
       userRef.onSnapshot(snapShot => {
+        // creates new obj with id and value of snapshot and sets it in state
         this.setState({ 
           currentUser: {
             id: snapShot.id,
             ...snapShot.data()
+            // .data() is what returns our properties with data values stored in snapshot
           }
         });
-
-        console.log(this.state);
+        // console.log(this.state);
       });
     } else {
       this.setState({currentUser: userAuth});

@@ -12,7 +12,8 @@ import Jackets from '../shop/category/jackets/Jackets';
  return (
   <div 
     className={`${size} menu-item`} 
-    onClick={() => navigate('shop/' + linkUrl)}>
+    onClick={() => navigate('shop/' + linkUrl)}
+  >
     <div 
       className="background-image"
       style={{

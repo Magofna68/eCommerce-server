@@ -13,8 +13,8 @@ import Logo from '../../assets/crown.png'
 import { auth } from '../../firebase/Firebase.utils';
 
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
-import { Container } from 'react-bootstrap';
-
+import { Container, Button } from 'react-bootstrap';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 import React from 'react'
 
@@ -55,6 +55,33 @@ export default function Navigationbar({currentUser}) {
                :
                <Navbar.Text><span className="navbar-text">Have an account?</span></Navbar.Text>
               }
+              <Button
+                style={{
+                  width: '3rem',
+                  height: '3rem',
+                  marginRight: '2%',
+                  position: 'relative',
+                }}
+                variant="outline-primary"
+                className="rounded-circle"
+              >
+                <ShoppingCartOutlinedIcon fontSize="medium" />
+                <div 
+                  className='rounded-circle bg-danger d-flex 
+                  justify-content-center align-items-center'
+                  style={{
+                    color: 'white',
+                    bottom: 0,
+                    right: 0,
+                    transform: 'translate(35%, 35%)',
+                    width: '1.5rem',
+                    height: '1.5rem',
+                    position: 'absolute',
+                  }}
+                >
+                  3
+                </div>
+              </Button>
               </Nav>
             </NavbarCollapse>
           </Navbar>

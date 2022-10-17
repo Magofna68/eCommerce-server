@@ -9,6 +9,17 @@
   margin: 0 7.5px 15px;
   overflow: hidden;
   
+@media screen and (max-width: 664px){
+  // width: 80%;
+  width: 100vw;
+  height: 18vh;
+
+  &.large{
+    height: 25vh;
+    width: 100vw;
+  }
+}
+
   &:hover {
     cursor: pointer;
 

@@ -3,6 +3,7 @@ import './menu-item.scss';
 // import {Link, Routes, Route} from 'react-router-dom';
 // import {useNavigate} from 'react-router';
 import { useNavigate } from 'react-router';
+import Container from 'react-bootstrap/Container';
 
 import Jackets from '../shop/category/jackets/Jackets';
 
@@ -10,6 +11,7 @@ import Jackets from '../shop/category/jackets/Jackets';
   const navigate = useNavigate();
 
  return (
+  
   <div 
     className={`${size} menu-item`} 
     onClick={() => navigate('shop/' + linkUrl)}
@@ -25,6 +27,7 @@ import Jackets from '../shop/category/jackets/Jackets';
           <span className='subtitle'>SHOP NOW</span>
       </div>
   </div>
+
  )
 }
 // withRouter gives us access to history -- powers up our MenuItem component

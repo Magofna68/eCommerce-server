@@ -25,10 +25,10 @@ export default function FullCollectionItem({id, name, price, img, img2}) {
 const quantity = 1;
 
 // const handleDecrementClick = (e) => (
-//   quantity --
+//   quantity -= 1
 // )
 return (
-  <ShoppingCartProvider>
+  // <ShoppingCartProvider>
   <Card className='fullCollectionItem'>
     <Card.Img 
       className="fullCollectionImg"
@@ -104,7 +104,7 @@ return (
         </>}
     </div>
   </Card>
-  </ShoppingCartProvider>
+  // </ShoppingCartProvider>
 )};
 
 // export default FullCollectionItem;

@@ -8,7 +8,7 @@ import DB from './assets/DB.jpg';
 import Insomniac from './assets/Insomniac.jpg';
 import TSSF from './assets/TSSF.jpg';
 
-export const SHOP_DATA = [
+const SHOP_DATA = [
   {
     id: 1,
     title: 'Sneakers',
@@ -611,4 +611,14 @@ export const WOMENS_SHOP_DATA = [
   }
 ]
 
-export default SHOP_DATA;
+function getProductData(id) {
+  let shopData = SHOP_DATA.find(product => product.id === id)
+
+  if (shopData === undefined) {
+    console.log("Product data does not exist for this ID:" + id);
+    return undefined;
+  }
+  return shopData;
+}
+
+export { SHOP_DATA, getProductData };

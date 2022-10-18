@@ -13,12 +13,15 @@ import Logo from '../../assets/crown.png'
 import { auth } from '../../firebase/Firebase.utils';
 
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
-import { Container, Button } from 'react-bootstrap';
+import { Container, Button, Modal } from 'react-bootstrap';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
-import React from 'react'
+import React, { useState } from 'react'
 
 export default function Navigationbar({currentUser}) {
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
         // <Router>
           <Container className='p-0' fluid={true}>
@@ -64,6 +67,7 @@ export default function Navigationbar({currentUser}) {
                 }}
                 variant="outline-primary"
                 className="rounded-circle"
+                onClick={handleShow}
               >
                 <ShoppingCartOutlinedIcon fontSize="medium" />
                 <div 
@@ -85,6 +89,12 @@ export default function Navigationbar({currentUser}) {
               </Nav>
             </NavbarCollapse>
           </Navbar>
+          <Modal show={show} onHide={handleClose}>
+            <Modal.Header closeButton>
+              <Modal.Title>Shopping Cart</Modal.Title>
+              <Modal.Body><h1>this is the modal body</h1></Modal.Body>
+            </Modal.Header>
+          </Modal>
 
           <Routes>
           {/* <Route path='/'>Sign In</Route> */}

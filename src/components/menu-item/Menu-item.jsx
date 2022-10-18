@@ -1,11 +1,7 @@
 import React from "react";
 import './menu-item.scss';
-// import {Link, Routes, Route} from 'react-router-dom';
-// import {useNavigate} from 'react-router';
 import { useNavigate } from 'react-router';
-import Container from 'react-bootstrap/Container';
 
-import Jackets from '../shop/category/jackets/Jackets';
 
  const MenuItem = ({ title, imageUrl, size, linkUrl }) => {
   const navigate = useNavigate();
@@ -30,5 +26,4 @@ import Jackets from '../shop/category/jackets/Jackets';
 
  )
 }
-// withRouter gives us access to history -- powers up our MenuItem component
 export default MenuItem;

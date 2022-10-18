@@ -20,12 +20,15 @@ export const FullCollectionItem = ({id, name, price, img, img2}) => (
 
   <Card 
     className='fullCollectionItem'
-    style={{ 
-      border: 'none',
-      width: '16rem',
-      // margin: '10px',
-      height: '400px',
-    }}>
+    // style={{ 
+    //   border: 'none',
+    //   width: '16rem',
+    //   maxWidth: '20rem',
+    //   // width: '23%',
+    //   margin: '10px',
+    //   height: '400px',
+    // }}
+  >
     <Card.Img 
       variant='top' 
       src={img} 

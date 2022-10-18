@@ -1,15 +1,11 @@
 import React from 'react'
 import './collectionPreview.styles.scss'
 import CollectionItem from '../collection-item/CollectionItem';
-import { useNavigate } from 'react-router';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 
 
-// const navigate = useNavigate()
-
 export const CollectionPreview = ({title, items, routeName}) => (
-    // <div 
     <Container
       fluid
       className='collectionPreview'
@@ -37,7 +33,6 @@ export const CollectionPreview = ({title, items, routeName}) => (
             <CollectionItem key={id} {...otherItemProps} />
             ))}
       </div>
-    {/* </div> */}
     </Container>
   )
 

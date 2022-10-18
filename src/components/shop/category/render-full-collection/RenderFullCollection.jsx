@@ -7,7 +7,6 @@ import Col from 'react-bootstrap/Col';
 
 export const RenderFullCollection = ({title, items}) => (
   <Container fluid
-    // <div 
       className='collection'
     >
       <Row>
@@ -17,14 +16,12 @@ export const RenderFullCollection = ({title, items}) => (
             fontSize: '28px',
             marginBottom: '25px',
             marginTop: '25px',
-            fontWeight: '600',
+            fontWeight: '700',
           }}
         >
           {title.toUpperCase()}
         </h1>
       </Row>
-      {/* <Row m={12}>
-        <Col> */}
           <div 
             className='preview'
             style={{ 
@@ -40,9 +37,6 @@ export const RenderFullCollection = ({title, items}) => (
                 ))
               };
           </div>
-        {/* </Col>
-    </Row> */}
-    {/* </div> */}
   </Container>
 )
 

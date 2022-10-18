@@ -25,7 +25,7 @@ const CollectionItem = ({id, name, price, img, img2}) => (
       display: 'flex',
       border: 'none',
       width: '16rem',
-      margin: '10px',
+      margin: ' 10px',
       height: '375px',
     }}>
     <Card.Img 
@@ -42,7 +42,7 @@ const CollectionItem = ({id, name, price, img, img2}) => (
         alignContent: 'center',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: '3% 2%',
+        padding: '1% 2%',
         textAlign: 'center',
         flexDirection: 'column',
       }}

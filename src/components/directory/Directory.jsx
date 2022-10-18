@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 
 import MenuItem from '../menu-item/Menu-item';
-import Container from 'react-bootstrap/Container';
-// import Container from 'react-bootstrap/Container';
 
 import './directory.styles.scss';
 
@@ -49,12 +47,9 @@ export default class Directory extends React.Component {
   render() {
     return (
       <div fluid className='directory-menu'>
-        {/* <Row> */}
-
         {this.state.sections.map(({id, ...otherSectionProps }) => (
             <MenuItem key={id} {...otherSectionProps} />
         ))}
-        {/* </Row> */}
       </div>
     )
   }

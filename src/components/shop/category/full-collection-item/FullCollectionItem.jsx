@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import AddShoppingCartSharpIcon from '@mui/icons-material/AddShoppingCartSharp';
 
 import './fullCollectionItem.styles.scss';
-import { ShoppingCartProvider } from '../../../context/ShoppingCartContext';
+import { ShoppingCartContext } from '../../../context/ShoppingCartContext';
+
 
 // export const FullCollectionItem = ({id, name, price, img, img2}) => (
   // <div className='fullCollectionItem'>
@@ -22,11 +23,10 @@ import { ShoppingCartProvider } from '../../../context/ShoppingCartContext';
   //   </div>
   // </div>
 export default function FullCollectionItem({id, name, price, img, img2}) {
-const quantity = 1;
-
-// const handleDecrementClick = (e) => (
-//   quantity -= 1
-// )
+  const quantity = 0;
+  const cart = useContext(ShoppingCartContext);
+  const productQuantity = cart.getProductQuantity(id);
+  console.log(cart.items);
 return (
   // <ShoppingCartProvider>
   <Card className='fullCollectionItem'>
@@ -71,6 +71,7 @@ return (
     <div className='w-100'>
       {quantity === 0  ? (
         <Button 
+          onClick={() => cart.addOneItemToCart(id)}
           variant="outline-primary" 
           className="w-100"
           style={{
@@ -93,11 +94,11 @@ return (
             className='d-flex align-items-center justify-content-center'
             style={{gap: '.5rem'}}
           >
-            <Button>-</Button>
+            <Button onClick={() => cart.removeOneItemFromCart(id)}>-</Button>
             <div>
               <span className='fs-3'>{quantity}</span> in cart
             </div>
-            <Button>+</Button>
+            <Button onClick={() => cart.addOneItemToCart(id)}>+</Button>
           </div>
           <Button variant="danger" size="sm">Remove</Button>
         </div>

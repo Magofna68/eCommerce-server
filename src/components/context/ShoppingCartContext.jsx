@@ -1,7 +1,7 @@
-import React, { createContext, useContext, useState } from 'react';
-import { SHOP_DATA, getProductData } from '../../data';
+import React, { createContext, useState } from 'react';
+import { getProductData } from '../../data';
 
-const ShoppingCartContext = createContext({
+export const ShoppingCartContext = createContext({
   items: [],
   // dont define functions w/n context -- code below to pass to provider: 
   getProductQuantity: () => {},

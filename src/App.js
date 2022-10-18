@@ -12,7 +12,7 @@ import {Header} from './components/utility/header/Header';
 
 import { auth, createUserProfileDocument } from './firebase/Firebase.utils';
 
-
+import CartProvider from './components/context/ShoppingCartContext';
 
 class App extends React.Component {
   constructor() {
@@ -59,18 +59,20 @@ componentWillUnmount() {
   render() {
 
     return (
-      <Router>
-        <div className="App">
-          <Header currentUser={this.state.currentUser}/>
-        </div>
-        <Routes>
-          <Route path='/shop/jackets' element={<Jackets />}/>
-          <Route path='/shop/sneakers' element={<Sneakers/>}/>
-          <Route path='/shop/mens' element={<MensClothing />}/>
-          <Route path='/shop/womens' element={<WomensClothing/>}/>
-          <Route path='/shop/hats' element={<Hats/>}/>
-        </Routes>
-      </Router>
+      <CartProvider>
+        <Router>
+          <div className="App">
+            <Header currentUser={this.state.currentUser}/>
+          </div>
+          <Routes>
+            <Route path='/shop/jackets' element={<Jackets />}/>
+            <Route path='/shop/sneakers' element={<Sneakers/>}/>
+            <Route path='/shop/mens' element={<MensClothing />}/>
+            <Route path='/shop/womens' element={<WomensClothing/>}/>
+            <Route path='/shop/hats' element={<Hats/>}/>
+          </Routes>
+        </Router>
+      </CartProvider>
     )
   }
 };

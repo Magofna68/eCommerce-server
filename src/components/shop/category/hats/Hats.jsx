@@ -1,5 +1,5 @@
 import React from 'react'
-import SHOP_DATA from '../../../../data'
+import {SHOP_DATA} from '../../../../data'
 // import CollectionPreview from '../../preview-collection/CollectionPreview';
 import RenderFullCollection from '../render-full-collection/RenderFullCollection';
 

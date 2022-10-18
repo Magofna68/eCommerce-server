@@ -611,7 +611,7 @@ export const WOMENS_SHOP_DATA = [
   }
 ]
 
-function getProductData(id) {
+ function getProductData(id) {
   let shopData = SHOP_DATA.find(product => product.id === id)
 
   if (shopData === undefined) {

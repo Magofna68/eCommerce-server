@@ -1,5 +1,5 @@
 import React from 'react'
-import SHOP_DATA from '../../../../data';
+import {SHOP_DATA} from '../../../../data';
 import RenderFullCollection from '../render-full-collection/RenderFullCollection';
 
 export default function Jackets({id, ...otherCollectionProps}) {

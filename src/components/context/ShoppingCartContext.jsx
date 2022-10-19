@@ -13,6 +13,7 @@ export const ShoppingCartContext = createContext({
 
 export function CartProvider({children}) {
   const [cartProducts, setCartProducts ] = useState([]);
+
   
   function getProductQuantity(id) {
    const quantity = cartProducts.find(product => product.id === id)?.quantity
@@ -23,7 +24,8 @@ export function CartProvider({children}) {
     return quantity;
   }
 
-  function addOneItemToCart(id) {
+
+  function addOneItemToCart(id, name) {
     const quantity = getProductQuantity(id);
 
     if (quantity === 0) {  //if product is not in cart
@@ -32,6 +34,7 @@ export function CartProvider({children}) {
           ...cartProducts, // copy cart objects
           {
             id: id,
+            name: name,
             quantity: 1    // add new item to cart w/ quantity of 1
           }
         ]
@@ -83,7 +86,7 @@ export function CartProvider({children}) {
   }
 
   const contextValue = {
-    items: [],
+    items: cartProducts,
     getProductQuantity,
     addOneItemToCart,
     removeOneItemFromCart,

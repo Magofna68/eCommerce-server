@@ -6,7 +6,7 @@ import RenderFullCollection from '../render-full-collection/RenderFullCollection
 export default function Hats() {
   const hatCollection = [];
   hatCollection.push(SHOP_DATA[2]);
-  console.log({hatCollection})
+  // console.log({hatCollection})
 
   return (
     <div
@@ -17,7 +17,7 @@ export default function Hats() {
       <h1>{hatCollection.title}</h1>
       {
         hatCollection.map(({id, ...otherCollectionProps}) => (
-          <RenderFullCollection key={id} {...otherCollectionProps} />
+          <RenderFullCollection id={id} key={id} {...otherCollectionProps} />
         ))
       };
     </div>

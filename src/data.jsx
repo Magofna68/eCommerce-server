@@ -10,7 +10,7 @@ import TSSF from './assets/TSSF.jpg';
 
 const SHOP_DATA = [
   {
-    id: 1,
+    // id: 1,
     title: 'Sneakers',
     routeName: 'sneakers',
     items: [

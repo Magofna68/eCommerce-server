@@ -71,7 +71,7 @@ return (
     <div className='w-100'>
       {quantity === 0  ? (
         <Button 
-          onClick={() => cart.addOneItemToCart(id)}
+          onClick={() => cart.addOneItemToCart(id, name)}
           variant="outline-primary" 
           className="w-100"
           style={{
@@ -94,7 +94,7 @@ return (
             className='d-flex align-items-center justify-content-center'
             style={{gap: '.5rem'}}
           >
-            <Button onClick={() => cart.removeOneItemFromCart(id)}>-</Button>
+            <Button onClick={() => cart.removeOneItemFromCart(id.items.id)}>-</Button>
             <div>
               <span className='fs-3'>{quantity}</span> in cart
             </div>

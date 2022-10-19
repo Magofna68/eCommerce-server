@@ -69,7 +69,7 @@ return (
       </Card.Text>
     </Card.Body>
     <div className='w-100'>
-      {quantity === 0  ? (
+      {productQuantity === 0 ? (
         <Button 
           onClick={() => cart.addOneItemToCart(id, name)}
           variant="outline-primary" 
@@ -94,13 +94,13 @@ return (
             className='d-flex align-items-center justify-content-center'
             style={{gap: '.5rem'}}
           >
-            <Button onClick={() => cart.removeOneItemFromCart(id.items.id)}>-</Button>
+            <Button onClick={() => cart.removeOneItemFromCart(id)}>-</Button>
             <div>
-              <span className='fs-3'>{quantity}</span> in cart
+              <span className='fs-3'>{productQuantity}</span> in cart
             </div>
             <Button onClick={() => cart.addOneItemToCart(id)}>+</Button>
           </div>
-          <Button variant="danger" size="sm">Remove</Button>
+          <Button variant="danger" size="sm" onClick={() => cart.deleteItemFromCart(id)}>Remove</Button>
         </div>
         </>}
     </div>

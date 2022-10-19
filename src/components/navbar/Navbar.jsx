@@ -16,12 +16,16 @@ import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import { Container, Button, Modal } from 'react-bootstrap';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react';
+import { ShoppingCartContext } from '../context/ShoppingCartContext';
 
 export default function Navigationbar({currentUser}) {
+  const cart = useContext(ShoppingCartContext);
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const productCount = cart.items.reduce((sum, product) => sum + product.quantity, 0); 
   return (
         // <Router>
           <Container className='p-0' fluid={true}>
@@ -83,7 +87,7 @@ export default function Navigationbar({currentUser}) {
                     position: 'absolute',
                   }}
                 >
-                  3
+                  {productCount}
                 </div>
               </Button>
               </Nav>

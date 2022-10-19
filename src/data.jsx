@@ -10,7 +10,7 @@ import TSSF from './assets/TSSF.jpg';
 
 const SHOP_DATA = [
   {
-    // id: 1,
+    id: 0,
     title: 'Sneakers',
     routeName: 'sneakers',
     items: [
@@ -77,40 +77,40 @@ const SHOP_DATA = [
     ],
   },
   {
-    id: 2,
+    id: 1,
     title: 'Jackets',
     routeName: 'jackets',
     items: [
       {
-        id: 1,
+        id: 11,
         name: 'Womens Winter Warmer Coat | Insulated Jacket',
         alt: 'Womens Winter Jacket Model',
         img: 'https://cdni.llbean.net/is/image/wim/271139_0_44?hei=1095&wid=950&resMode=sharp2&defaultImage=llbprod/A0211793_2',
         price: '$37.99'
       },
       {
-        id: 2,
+        id: 12,
         name: 'Womens Jackets Long-sleeve Printed Fringed Jacket',
         alt: 'Womens Jacket Model',
         img: 'https://img-va.myshopline.com/image/store/2000372313/1640572147473/a425b42fb0144dd795cd40fa538010ca_1296x.jpg?w=1100&h=1500',
         price: '$44.99'
       },
       {
-        id: 3,
+        id: 13,
         name: ' Women\'s Foxy Sherpa Jacket',
         alt: 'Womens Jacket',
         img: 'https://cdn.shopify.com/s/files/1/2185/2813/products/W4313R_01660_b1_s1_a1_1_m89_750x.jpg?v=1662676081',
         price: '$198'
       },
       {
-        id: 4,
+        id: 14,
         name: 'Women\'s Classic Suit Blazer',
         alt: 'Womens Blazer',
         img: 'https://bananarepublicfactory.gapfactory.com/webcontent/0028/599/220/cn28599220.jpg',
         price: '$104'
       },
       {
-        id: 5,
+        id: 15,
         name: 'Men\'s Vintage Fashion Coat',
         alt: 'Mens Leather Jacket',
         img: 'https://i.ebayimg.com/images/g/O1MAAOSw~z5jMXTu/s-l500.jpg',
@@ -118,7 +118,7 @@ const SHOP_DATA = [
         price: '$50.50',
       },
       {
-        id: 6,
+        id: 16,
         name: 'Men\'s Lightweight Bomber Jacket',
         alt: 'Mens Bomber Jacket Shell',
         img: 'https://m.media-amazon.com/images/I/71M8rwNjBKS._AC_UY879_.jpg',
@@ -126,7 +126,7 @@ const SHOP_DATA = [
         price: '$33.99',
       },
       {
-        id: 7,
+        id: 17,
         name: 'Men\'s Hip-Hop Style Fluffy Winter Coat',
         alt: 'Fluffy winter Jacket',
         img: 'https://cdn.shopify.com/s/files/1/0088/6377/6815/products/Winter-Coat-Solid-Color-Plush-Simple-Fluffy-Men-Jacket-Hip-hop-Style-Winter-Coat_47264229-222a-4ea0-ab13-252a2516c1b2_1024x1024@2x.jpg?v=1663142831',
@@ -134,7 +134,7 @@ const SHOP_DATA = [
         price: '$149',
       },
       {
-        id: 8,
+        id: 18,
         name: 'Men\'s Quilted Cotton Summer Jacket',
         alt: 'Mens Solid Color Jacket',
         img: 'https://i5.walmartimages.com/asr/4c5224a2-3e51-4a56-bc21-92ebc558ed3d.c2b0b56ba884cca32cdb3faf439392c5.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF',
@@ -144,19 +144,19 @@ const SHOP_DATA = [
     ]
   },
   {
-    id: 3,
+    id: 2,
     title: 'Hats',
     routeName: 'hats',
     items: [
       {
-        id: 1,
+        id: 21,
         name: 'Bass Academy Snap-back',
         alt: 'Black hat',
         img: `${Bass}`,
         price: '$24.99'
       },
       {
-        id: 2,
+        id: 22,
         name: 'Alumni Designer Snap-back',
         alt: 'designer hat',
         img: `${Paradise}`,
@@ -164,55 +164,55 @@ const SHOP_DATA = [
     
       },
       {
-        id: 3,
+        id: 23,
         name: 'Insomniac Snap-back',
         alt: 'Black Insomniac hat',
         img: `${Insomniac}`,
         price: '$29.99'
       },
       {
-        id: 4,
+        id: 24,
         name: 'Illuminated EDC snap-back',
         alt: 'Black light up EDC snap',
         img: `${EDC}`,
         price: '$34.99'
       },
       {
-        id: 5,
+        id: 25,
         name: 'DB dad hat',
         alt: 'Retro hat',
         img: `${DB}`,
         price: '$12.99'
       },
       {
-        id: 6,
+        id: 26,
         name: 'Alumni Oreo Snap-back',
         alt: 'Alumni designer hat',
         img: `${Oreo}`,
         price: '$19.99'
       },
       {
-        id: 7,
+        id: 27,
         name: 'Alumni Designer Strap-back',
         alt: 'designer hat',
         img: `${Paradise3}`,
         price: '$22.99'
       },
       {
-        id: 8,
+        id: 28,
         name: 'Alumni Paradise Snap-back',
         alt: 'Alumni designer hat',
         img: `${Paradise}`,
       },
       {
-        id: 9,
+        id: 29,
         name: 'Alumni Designer Snap-back',
         alt: 'designer hat',
         img: `${Paradise2}`,
         price: '$19.99'
       },
       {
-        id: 10,
+        id: 210,
         name: 'TSSF dad hat',
         alt: 'Navy blue and cream dad hat',
         img: `${TSSF}`,
@@ -221,12 +221,12 @@ const SHOP_DATA = [
     ],
   },
   {
-    id: 4,
+    id: 3,
     title: 'Shirts',
     routeName: 'shirts',
     items: [
       {
-        id: 1,
+        id: 31,
         name: 'AE Graphic Tee',
         alt: 'White Graphic shirt',
         img: 'https://s7d2.scene7.com/is/image/aeo/0160_4124_100_f?$pdp-mtg-opt$&fmt=webp',
@@ -234,7 +234,7 @@ const SHOP_DATA = [
         price: '$14.99',
       },
       {
-        id: 2,
+        id: 32,
         name: 'Men\'s Random Allover Shirt',
         alt: 'Printed Button-Up',
         img: 'https://img.ltwebstatic.com/images3_pi/2022/04/24/165076834615aa93b86a959f2d85ef6b3ba8e53f62_thumbnail_900x.webp',
@@ -242,7 +242,7 @@ const SHOP_DATA = [
         price: '$12',
       },
       {
-        id: 3,
+        id: 33,
         name: 'Men\'s Fashion Design Long Sleeve',
         alt: 'White Long Sleeve Shirt',
         img: 'https://i5.walmartimages.com/asr/eaaba20d-1327-4338-a4d5-8858c01d5146.c569110490e2abc067a864cd8a6d8a80.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF',
@@ -250,7 +250,7 @@ const SHOP_DATA = [
         price: '$15',
       },
       {
-        id: 4,
+        id: 34,
         name: 'Men\'s NFL Cincinnati, Joe Mixon Legend Jersey',
         alt: 'Black and Striped Jersey',
         img: 'https://fanatics.frgimages.com/cincinnati-bengals/mens-nike-joe-mixon-black-cincinnati-bengals-legend-jersey_pi4059000_altimages_ff_4059559-367f39bca1048a771872alt2_full.jpg?_hv=2&w=900',
@@ -258,7 +258,7 @@ const SHOP_DATA = [
         price: '$99',
       },
       {
-        id: 5,
+        id: 35,
         name: 'Women\'s Chargers NFL Nike Jersey',
         alt: 'Chargers NFL Home Jersey',
         img: 'https://fanatics.frgimages.com/los-angeles-chargers/womens-nike-justin-herbert-powder-blue-los-angeles-chargers-game-jersey_pi3911000_altimages_ff_3911893-6d26fc46bc56f4fdb2bcalt2_full.jpg?_hv=2&w=900',
@@ -266,7 +266,7 @@ const SHOP_DATA = [
         price: '$129'
       },
       {
-        id: 6,
+        id: 36,
         name: 'Women\'s Pro Choice Tee',
         alt: 'Feminism Shirt',
         img: 'https://i.ebayimg.com/images/g/pMIAAOSw32dixu~~/s-l300.jpg',
@@ -274,7 +274,7 @@ const SHOP_DATA = [
         price: '$17.99'
       },
       {
-        id: 7,
+        id: 37,
         name: 'Women\'s Classic Denim',
         alt: 'Classic Long Sleeve Denim',
         img: 'https://i5.walmartimages.com/asr/b6caa34c-ab70-471e-a5ec-280355f786dc.41023d3576fab5ecbc91fb32056b8e00.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF',
@@ -282,7 +282,7 @@ const SHOP_DATA = [
         price: '$36'
       },
       {
-        id: 8,
+        id: 38,
         name: 'Women\'s Evil Natural Tee',
         alt: 'Creme Melodie T-Shirt',
         img: 'https://scene7.zumiez.com/is/image/zumiez/product_main_medium_2x/Melodie-Evil-Natural-T-Shirt-_332986-front-US.jpg',

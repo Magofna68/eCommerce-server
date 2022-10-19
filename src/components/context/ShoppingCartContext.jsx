@@ -25,7 +25,7 @@ export function CartProvider({children}) {
   }
 
 
-  function addOneItemToCart(id, name, price) {
+  function addOneItemToCart(id, name, price, img) {
     const quantity = getProductQuantity(id);
 
     if (quantity === 0) {  //if product is not in cart
@@ -36,6 +36,7 @@ export function CartProvider({children}) {
             id: id,
             name: name,
             price: price,
+            img: img,
             quantity: 1    // add new item to cart w/ quantity of 1
           }
         ]
@@ -81,10 +82,8 @@ export function CartProvider({children}) {
     let totalCost = 0;
     cartProducts.map((cartItem) => {
       let priceArray =[];
-      // let productData = cartItem.price
       priceArray.push(cartItem.price);
-      // productData = null;
-      console.log(priceArray.length, "PRODUCT DATA");
+      // console.log(priceArray.length, "PRODUCT DATA");
       totalCost += (priceArray * cartItem.quantity);
       console.log(totalCost, "Total Cost");
     });

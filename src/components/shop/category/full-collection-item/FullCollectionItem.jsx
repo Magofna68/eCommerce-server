@@ -7,28 +7,11 @@ import './fullCollectionItem.styles.scss';
 import { ShoppingCartContext } from '../../../context/ShoppingCartContext';
 
 
-// export const FullCollectionItem = ({id, name, price, img, img2}) => (
-  // <div className='fullCollectionItem'>
-  //   <div 
-  //     className='fullCollectionImg'
-  //     style={{
-  //       backgroundImage: `url(${img})`,
-  //       onHover: `url(${img2})`
-  //     }}
-  //   />
-  //   <div className='fullCollectionFooter'>
-  //     <span className='name'>{ name }</span>
-  //     <br />
-  //   <span className='price'>{ price }</span>
-  //   </div>
-  // </div>
 export default function FullCollectionItem({id, name, price, img, img2}) {
-  const quantity = 0;
   const cart = useContext(ShoppingCartContext);
   const productQuantity = cart.getProductQuantity(id);
   // console.log(cart.items);
 return (
-  // <ShoppingCartProvider>
   <Card className='fullCollectionItem'>
     <Card.Img 
       className="fullCollectionImg"
@@ -36,12 +19,10 @@ return (
       src={img} 
       style={{
         height: '75%',
-        // minHeight: '70%'
       }}/>
     <Card.Body 
       style={{
         height: '15%',
-        // background: 'orange',
         display: 'flex',
         alignContent: 'center',
         alignItems: 'center',
@@ -71,7 +52,7 @@ return (
     <div className='w-100'>
       {productQuantity === 0 ? (
         <Button 
-          onClick={() => cart.addOneItemToCart(id, name, price)}
+          onClick={() => cart.addOneItemToCart(id, name, price, img)}
           variant="outline-primary" 
           className="w-100"
           style={{

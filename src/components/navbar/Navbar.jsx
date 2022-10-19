@@ -1,5 +1,7 @@
 import './navbar.styles.scss';
 
+import { Row, Col, } from 'react-bootstrap';
+
 import SignInAndSignUpPage from '../../pages/signinPage/Sign-in-sign-up';
 import NavbarToggle from 'react-bootstrap/esm/NavbarToggle';
 import NavbarCollapse from 'react-bootstrap/esm/NavbarCollapse';
@@ -95,18 +97,45 @@ export default function Navigationbar({currentUser}) {
           </Navbar>
           <Modal show={show} onHide={handleClose}>
             <Modal.Header closeButton>
-              <Modal.Title>Shopping Cart</Modal.Title>
+              <Modal.Title>Your Shopping Cart</Modal.Title>
             </Modal.Header>
               <Modal.Body>
-                You have {productCount} items in your cart.
+                <h3>There are {productCount} items:</h3>
                 {
                   productCount > 0 ?
                   <>
-                  <p>Items in your cart:</p>
+                    <Container style={{marginBottom: '5%'}}>
+                      <Row style={{marginBottom: '1%'}}>
+                        <Col><h6>Item:</h6></Col>
+                        {/* <Col><h6>Quantity:</h6></Col> */}
+                        <Col xs={6} style={{textAlign: 'center', marginRight: '23%'}}><h6>Name:</h6></Col>
+                        <Col style={{ textAlign: 'right'}}><h6>Price:</h6></Col>
+                      </Row>
                   {cart.items.map((currentProduct, idx) => (
-                    <h3>${currentProduct.price} || {currentProduct.name}: {currentProduct.quantity}</h3>
+                    <>
+                      <Row>
+                        <Col>
+                          <img 
+                            src={currentProduct.img}
+                            width='50px'
+                            height="50px"
+                            alt="Cart Preview"
+                            />
+                        </Col>
+                            <Col>
+                            <h5>x {currentProduct.quantity}</h5>
+                            </Col>
+                        <Col xs={7}>
+                        {currentProduct.name}
+                        </Col>
+                        <Col style={{textAlign: 'right'}}>
+                        ${currentProduct.price}
+                        </Col>
+                      </Row>
+                    </>
                     ))}
-                    <h1>Total: {cart.getTotalCost()}</h1>
+                    </Container> 
+                    <h1 style={{ textAlign: 'right'}}>Total: {cart.getTotalCost()}</h1>
                   <Button variant="success" onClick={() => console.log(cart.items)}>Checkout</Button>
                   </>
                   :

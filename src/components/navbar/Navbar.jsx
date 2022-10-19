@@ -96,8 +96,24 @@ export default function Navigationbar({currentUser}) {
           <Modal show={show} onHide={handleClose}>
             <Modal.Header closeButton>
               <Modal.Title>Shopping Cart</Modal.Title>
-              <Modal.Body><h1>this is the modal body</h1></Modal.Body>
             </Modal.Header>
+              <Modal.Body>
+                You have {productCount} items in your cart.
+                {
+                  productCount > 0 ?
+                  <>
+                  <p>Items in your cart:</p>
+                  {cart.items.map((currentProduct, idx) => (
+                    <h3>${currentProduct.price} || {currentProduct.name}: {currentProduct.quantity}</h3>
+                    ))}
+                    <h1>Total: {cart.getTotalCost()}</h1>
+                  <Button variant="success" onClick={() => console.log(cart.items)}>Checkout</Button>
+                  </>
+                  :
+                  <h1>There are no items in your cart</h1>
+                }
+              </Modal.Body>
+              {/* <Button onClick={()=> console.log(cart.name)}>click me</Button> */}
           </Modal>
 
           <Routes>

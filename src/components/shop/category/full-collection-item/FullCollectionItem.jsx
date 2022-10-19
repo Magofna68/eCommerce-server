@@ -26,7 +26,7 @@ export default function FullCollectionItem({id, name, price, img, img2}) {
   const quantity = 0;
   const cart = useContext(ShoppingCartContext);
   const productQuantity = cart.getProductQuantity(id);
-  console.log(cart.items);
+  // console.log(cart.items);
 return (
   // <ShoppingCartProvider>
   <Card className='fullCollectionItem'>
@@ -65,13 +65,13 @@ return (
           fontWeight: '600'
         }}
       >
-        {price}
+        ${price}
       </Card.Text>
     </Card.Body>
     <div className='w-100'>
       {productQuantity === 0 ? (
         <Button 
-          onClick={() => cart.addOneItemToCart(id, name)}
+          onClick={() => cart.addOneItemToCart(id, name, price)}
           variant="outline-primary" 
           className="w-100"
           style={{

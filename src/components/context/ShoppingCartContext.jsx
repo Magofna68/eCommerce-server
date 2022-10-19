@@ -25,7 +25,7 @@ export function CartProvider({children}) {
   }
 
 
-  function addOneItemToCart(id, name) {
+  function addOneItemToCart(id, name, price) {
     const quantity = getProductQuantity(id);
 
     if (quantity === 0) {  //if product is not in cart
@@ -35,6 +35,7 @@ export function CartProvider({children}) {
           {
             id: id,
             name: name,
+            price: price,
             quantity: 1    // add new item to cart w/ quantity of 1
           }
         ]
@@ -79,10 +80,15 @@ export function CartProvider({children}) {
   function getTotalCost() {
     let totalCost = 0;
     cartProducts.map((cartItem) => {
-      const productData = getProductData(cartItem.id);
-      totalCost += (productData.price * cartItem.quantity);
-      return totalCost;
+      let priceArray =[];
+      // let productData = cartItem.price
+      priceArray.push(cartItem.price);
+      // productData = null;
+      console.log(priceArray.length, "PRODUCT DATA");
+      totalCost += (priceArray * cartItem.quantity);
+      console.log(totalCost, "Total Cost");
     });
+    return totalCost;
   }
 
   const contextValue = {

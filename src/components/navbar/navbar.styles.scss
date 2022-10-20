@@ -33,3 +33,23 @@ h2 {
 // .logo {
 //   width: 100px;
 // }
+
+#clearItemFromCart{
+  transition: .5s ease all;
+  color: red;
+
+  &:hover {
+    transform: scale(1.5);
+    border: 1px solid red;
+    color: white;
+  }
+}
+
+.cartQuantityArrow{
+  color: black;
+
+  &:hover {
+    transform: scale(1.25);
+    color: rgb(249, 209, 209)
+  }
+}

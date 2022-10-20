@@ -1,6 +1,9 @@
 import './navbar.styles.scss';
 
 import { Row, Col, } from 'react-bootstrap';
+import ClearIcon from '@mui/icons-material/Clear';
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 
 import SignInAndSignUpPage from '../../pages/signinPage/Sign-in-sign-up';
 import NavbarToggle from 'react-bootstrap/esm/NavbarToggle';
@@ -100,42 +103,81 @@ export default function Navigationbar({currentUser}) {
               <Modal.Title>Your Shopping Cart</Modal.Title>
             </Modal.Header>
               <Modal.Body>
-                <h3>There are {productCount} items:</h3>
+                <h3>{productCount} Items Added To Cart:</h3>
                 {
                   productCount > 0 ?
                   <>
                     <Container style={{marginBottom: '5%'}}>
                       <Row style={{marginBottom: '1%'}}>
                         <Col><h6>Item:</h6></Col>
-                        {/* <Col><h6>Quantity:</h6></Col> */}
-                        <Col xs={6} style={{textAlign: 'center', marginRight: '23%'}}><h6>Name:</h6></Col>
+                        <Col xs={6} style={{textAlign: 'left'}}><h6>Name:</h6></Col>
+                        <Col><h6>Quantity:</h6></Col>
                         <Col style={{ textAlign: 'right'}}><h6>Price:</h6></Col>
                       </Row>
                   {cart.items.map((currentProduct, idx) => (
                     <>
                       <Row>
-                        <Col>
-                          <img 
-                            src={currentProduct.img}
-                            width='50px'
-                            height="50px"
-                            alt="Cart Preview"
+                        <Col xs={2} style={{padding: '0'}}>
+                          <div 
+                            className='imgContainer'
+                            style={{
+                              display: 'flex',
+                              minWidth: '50px',
+                              maxWidth: '50px',
+                              height: '65px'
+                            }}
+                          >
+                            <img 
+                              src={currentProduct.img}
+                              maxWidth='100%'
+                              height="100%"
+                              alt="Cart Preview"
                             />
+                            <ClearIcon 
+                              fontSize="sm" 
+                              id="clearItemFromCart"
+                              onClick={()=> cart.deleteItemFromCart(currentProduct.id)}
+                              style={{
+                                
+                                position: 'absolute', 
+                                cursor: 'pointer'
+                              }}
+                              
+                            />
+                          </div>
                         </Col>
-                            <Col>
-                            <h5>x {currentProduct.quantity}</h5>
-                            </Col>
-                        <Col xs={7}>
+                        <Col xs={6} style={{padding: '5px 5px 0 0'}}>
                         {currentProduct.name}
                         </Col>
-                        <Col style={{textAlign: 'right'}}>
+                        <Col xs={2} style={{padding: '0', alignContent: 'center', justifyContent: 'space-between'}}>
+                          <div style={{display: 'flex', alignContent: 'center', marginTop: '15%'}}>
+                              <Col style={{padding: '0', }}>
+                                <KeyboardArrowLeftIcon 
+                                  fontSize='large' 
+                                  onClick={()=> cart.removeOneItemFromCart(currentProduct.id)}
+                                  className="cartQuantityArrow"
+                                />
+                              </Col>
+                              <Col style={{paddingTop: '8%',}}>
+                                <h6 style={{marginTop: '0%'}}>{currentProduct.quantity}</h6>
+                              </Col>
+                              <Col style={{padding: '0'}}>
+                                <KeyboardArrowRightIcon 
+                                  fontSize='large' 
+                                  onClick={()=> cart.addOneItemToCart(currentProduct.id)}
+                                  className="cartQuantityArrow"
+                                />
+                              </Col>
+                          </div>
+                        </Col>
+                        <Col xs={2} style={{textAlign: 'left', padding: '15px 0 0 5%'}}>
                         ${currentProduct.price}
                         </Col>
                       </Row>
                     </>
                     ))}
                     </Container> 
-                    <h1 style={{ textAlign: 'right'}}>Total: {cart.getTotalCost()}</h1>
+                    <h3 style={{ textAlign: 'right'}}><span style={{fontSize: '20px'}}>Total:</span> ${cart.getTotalCost()}</h3>
                   <Button variant="success" onClick={() => console.log(cart.items)}>Checkout</Button>
                   </>
                   :

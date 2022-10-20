@@ -2,6 +2,9 @@ import React, { useContext } from 'react'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import AddShoppingCartSharpIcon from '@mui/icons-material/AddShoppingCartSharp';
+import ItemDetailPage from '../../../../pages/itemDetailPage/ItemDetailPage';
+
+import { useNavigate } from 'react-router';
 
 import './fullCollectionItem.styles.scss';
 import { ShoppingCartContext } from '../../../context/ShoppingCartContext';
@@ -10,9 +13,13 @@ import { ShoppingCartContext } from '../../../context/ShoppingCartContext';
 export default function FullCollectionItem({id, name, price, img, img2}) {
   const cart = useContext(ShoppingCartContext);
   const productQuantity = cart.getProductQuantity(id);
+  const navigate = useNavigate();
   // console.log(cart.items);
 return (
-  <Card className='fullCollectionItem'>
+  <Card 
+    className='fullCollectionItem'
+    // onClick={()=> navigate('shop/:Route' + id)}
+  >
     <Card.Img 
       className="fullCollectionImg"
       variant='top' 

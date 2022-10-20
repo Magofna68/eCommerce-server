@@ -70,6 +70,7 @@ componentWillUnmount() {
             <Route path='/shop/mens' element={<MensClothing />}/>
             <Route path='/shop/womens' element={<WomensClothing/>}/>
             <Route path='/shop/hats' element={<Hats/>}/>
+            {/* <Route path='/shop/:Rout */}
           </Routes>
         </Router>
       </CartProvider>

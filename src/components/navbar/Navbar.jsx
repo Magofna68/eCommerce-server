@@ -30,6 +30,12 @@ export default function Navigationbar({currentUser}) {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  // function onProceedToCheckout (currentUser) => {
+  //   if (!currentUser) 
+  //     return <h1>Youll have to sign in before checking out.</h1>
+  
+  // }
+
   const productCount = cart.items.reduce((sum, product) => sum + product.quantity, 0); 
   return (
         // <Router>
@@ -103,7 +109,7 @@ export default function Navigationbar({currentUser}) {
               <Modal.Title>Your Shopping Cart</Modal.Title>
             </Modal.Header>
               <Modal.Body>
-                <h3>{productCount} Items Added To Cart:</h3>
+                <h3 style={{marginBottom: '10%'}}>{productCount} Items Added To Cart:</h3>
                 {
                   productCount > 0 ?
                   <>
@@ -178,7 +184,19 @@ export default function Navigationbar({currentUser}) {
                     ))}
                     </Container> 
                     <h3 style={{ textAlign: 'right'}}><span style={{fontSize: '20px'}}>Total:</span> ${cart.getTotalCost()}</h3>
-                  <Button variant="success" onClick={() => console.log(cart.items)}>Checkout</Button>
+                  {
+                    currentUser ?
+                      <Button 
+                        variant="success" 
+                        onClick={() => console.log(cart.items)}
+                      >
+                        Proceed to Checkout
+                      </Button>
+                    :
+                    <div style={{display: 'flex', justifyContent: 'right'}}>
+                      <p style={{fontWeight: 300, fontSize: '12px'}}>You'll have to sign in to complete your purchase</p>
+                    </div>
+                  }
                   </>
                   :
                   <h1>There are no items in your cart</h1>

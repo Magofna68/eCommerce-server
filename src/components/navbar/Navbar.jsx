@@ -59,48 +59,50 @@ export default function Navigationbar({currentUser}) {
                <Link className="nav-link" to="/">Home</Link>
                <Link className='nav-link' to="/shop">Shop</Link>
                <Link className='nav-link' to='/contact'>contact</Link>
-             {
-               currentUser ? 
-               <div>
-                <Link className="nav-link" to='/' onClick={()=> auth.signOut(console.log("Goodbye"))}>Sign Out</Link>
-                </div>
-                :
-                <Link className="nav-link" to='/login'>Sign In</Link>
-              }
-              {
-                currentUser ?
-               <Navbar.Text><span className="navbar-text">Signed in as: <br/>{currentUser.displayName}</span></Navbar.Text>
-               :
-               <Navbar.Text><span className="navbar-text">Have an account?</span></Navbar.Text>
-              }
-              <Button
-                style={{
-                  width: '3rem',
-                  height: '3rem',
-                  marginRight: '2%',
-                  position: 'relative',
-                }}
-                variant="outline-primary"
-                className="rounded-circle"
-                onClick={handleShow}
-              >
-                <ShoppingCartOutlinedIcon fontSize="medium" />
-                <div 
-                  className='rounded-circle bg-danger d-flex 
-                  justify-content-center align-items-center'
-                  style={{
-                    color: 'white',
-                    bottom: 0,
-                    right: 0,
-                    transform: 'translate(35%, 35%)',
-                    width: '1.5rem',
-                    height: '1.5rem',
-                    position: 'absolute',
-                  }}
-                >
-                  {productCount}
-                </div>
-              </Button>
+                {
+                  currentUser ? 
+                  <div>
+                    <Link className="nav-link" to='/' onClick={()=> auth.signOut(console.log("Goodbye"))}>Sign Out</Link>
+                  </div>
+                  :
+                    <Link className="nav-link" to='/login'>Sign In</Link>
+                  }
+                  {
+                    currentUser ?
+                      <Navbar.Text><span className="navbar-text">Signed in as: <br/>{currentUser.displayName}</span></Navbar.Text>
+                    :
+                      <Navbar.Text><span className="navbar-text">Have an account?</span></Navbar.Text>
+                  }
+                  <span style={{}}>
+                  <Button
+                    style={{
+                      width: '3rem',
+                      height: '3rem',
+                      marginRight: '2%',
+                      position: 'relative',
+                    }}
+                    variant="outline-primary"
+                    className="rounded-circle"
+                    onClick={handleShow}
+                  >
+                    <ShoppingCartOutlinedIcon fontSize="medium" style={{ marginRight: '3%'}}/>
+                    <div 
+                      className='rounded-circle bg-danger d-flex 
+                      justify-content-center align-items-center'
+                      style={{
+                        color: 'white',
+                        bottom: 0,
+                        right: 0,
+                        transform: 'translate(35%, 35%)',
+                        width: '1.5rem',
+                        height: '1.5rem',
+                        position: 'absolute',
+                      }}
+                    >
+                      {productCount}
+                    </div>
+                  </Button>
+                  </span>
               </Nav>
             </NavbarCollapse>
           </Navbar>

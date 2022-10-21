@@ -24,6 +24,7 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import React, { useState, useContext } from 'react';
 import { ShoppingCartContext } from '../context/ShoppingCartContext';
 import PaymentCompletePage from '../../pages/paymentCompletePage/PaymentCompletePage';
+import PaymentFailedPage from '../../pages/paymentCompletePage/PaymentFailedPage';
 
 export default function Navigationbar({currentUser}) {
   const cart = useContext(ShoppingCartContext);
@@ -233,6 +234,7 @@ export default function Navigationbar({currentUser}) {
             <Route path="/" exact element={<HomePage />}></Route>
             <Route path='/shop' element={<ShopPage/>}></Route>
             <Route path='/success' element={<PaymentCompletePage />}></Route>
+            <Route path='cancel' element={<PaymentFailedPage />}></Route>
             <Route path='/contact' element={<ContactPage />}></Route>
           </Routes>
         </Container> 

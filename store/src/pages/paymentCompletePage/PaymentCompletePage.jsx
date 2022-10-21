@@ -3,7 +3,9 @@ import React from 'react'
 export default function PaymentCompletePage() {
   return (
     <div>
-      Thank You for Shopping at Underground Royalty.<br/>
+      <h2>
+        Thank You for Shopping at Underground Royalty.
+      </h2><br/>
       Your Payment was Successful!
     </div>
   )

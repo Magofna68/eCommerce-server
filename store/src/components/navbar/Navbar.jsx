@@ -92,24 +92,25 @@ export default function Navigationbar({currentUser}) {
                   :
                     <Link className="nav-link" to='/login'>Sign In</Link>
                   }
-                  {
-                    currentUser ?
-                      <Navbar.Text><span className="navbar-text">Signed in as: <br/>{currentUser.displayName}</span></Navbar.Text>
-                    :
-                      <Navbar.Text><span className="navbar-text">Have an account?</span></Navbar.Text>
-                  }
-                  <span style={{}}>
+                    {
+                      currentUser ?
+                        <Navbar.Text><span style={{}} className="navbar-text">Signed in as: <br/><span style={{fontWeight: 'bold', color: 'black'}}>{currentUser.displayName}</span></span></Navbar.Text>
+                      :
+                        <Navbar.Text><span className="navbar-text">Have an account?</span></Navbar.Text>
+                    }
+                  <span style={{
+                    marginRight: '3%',
+                  }}>
                   <Button
                     style={{
                       width: '3rem',
                       height: '3rem',
-                      marginRight: '2%',
                       position: 'relative',
                     }}
                     variant="outline-primary"
                     className="rounded-circle"
                     onClick={handleShow}
-                  >
+                    >
                     <ShoppingCartOutlinedIcon fontSize="medium" style={{ marginRight: '3%'}}/>
                     <div 
                       className='rounded-circle bg-danger d-flex 
@@ -123,7 +124,7 @@ export default function Navigationbar({currentUser}) {
                         height: '1.5rem',
                         position: 'absolute',
                       }}
-                    >
+                      >
                       {productCount}
                     </div>
                   </Button>

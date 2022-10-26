@@ -42,7 +42,6 @@ export default function Navigationbar({currentUser}) {
   
   const checkout = async () => {
     await fetch('https://e-commerce-backend.onrender.com/checkout', {
-    // await fetch('http://localhost:4000/checkout', {
       // make post request to fetch Url
       method: 'POST',
       headers: {

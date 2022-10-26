@@ -36,8 +36,8 @@ app.post('/checkout', async (req, res) => {
     mode: 'payment',
     // success_url: 'http://localhost:3000/success',
     // cancel_url: 'http://localhost:3000/cancel'
-    success_url: 'https://e-commerce-backend.onrender.com/success',
-    cancel_url: 'https://e-commerce-backend.onrender.com/cancel',
+    success_url: 'https://magofna68.github.io/eCommerce-FrontEnd/success',
+    cancel_url: 'https://magofna68.github.io/eCommerce-FrontEnd/cancel',
   });
 
 

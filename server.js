@@ -1,12 +1,9 @@
 
-// Mens Nike Dunk High: price_1Lv4dkKFRYyirzJ3scXKuUNb
-// Air Jordan 6 Retro Low: price_1Lv4fDKFRYyirzJ3zo5SjNBm
-// Womens Winter Warmer Coat | Insulated Jacket: price_1Lv4gBKFRYyirzJ3uwBrj6C1
-
 const express = require('express');
 var cors = require('cors');
-const stripe = require('stripe')('sk_test_51Lv4UmKFRYyirzJ3VCUlJect3Pyb1RNVSAaZTzoO0aC4HggEPYoaw6wSXzwZmgnqzBqu67sAXsiOgMtpJiRoUwDO00UMJSTZ2w');
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
+const domainUrl = "https://magofna68.github.io/eCommerce-FrontEnd";
 const app = express();
 app.use(cors());
 app.use(express.static("public"));  //recommended by Stripe documentation
@@ -34,10 +31,8 @@ app.post('/checkout', async (req, res) => {
   const session = await stripe.checkout.sessions.create({
     line_items: lineItems,
     mode: 'payment',
-    // success_url: 'http://localhost:3000/success',
-    // cancel_url: 'http://localhost:3000/cancel'
-    success_url: 'https://magofna68.github.io/eCommerce-FrontEnd/success',
-    cancel_url: 'https://magofna68.github.io/eCommerce-FrontEnd/cancel',
+    success_url: `${domainUrl}/success`,
+    cancel_url: `${domainUrl}/cancel`,
   });
 
 

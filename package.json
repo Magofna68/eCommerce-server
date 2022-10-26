@@ -1,18 +1,27 @@
 {
-  "name": "e-commerce",
+  "name": "Stripe-Server-Code",
   "version": "1.0.0",
   "description": "",
+  "homepage": "https://Magofna68.github.io/e-commerce-Server",
   "main": "server.js",
   "scripts": {
+    "predeploy": "react-scripts build",
+    "deploy": "gh-pages -d build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
+  "engines": {
+    "node": "16.14"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "stripe": "^10.14.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }

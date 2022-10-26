@@ -34,8 +34,10 @@ app.post('/checkout', async (req, res) => {
   const session = await stripe.checkout.sessions.create({
     line_items: lineItems,
     mode: 'payment',
-    success_url: 'http://localhost:3000/success',
-    cancel_url: 'http://localhost:3000/cancel'
+    // success_url: 'http://localhost:3000/success',
+    // cancel_url: 'http://localhost:3000/cancel'
+    success_url: 'https://e-commerce-backend.onrender.com/success',
+    cancel_url: 'https://e-commerce-backend.onrender.com/cancel',
   });
 
 
@@ -45,4 +47,4 @@ app.post('/checkout', async (req, res) => {
   }));
 });
 
-app.listen(4000, () => console.log("listening on Port 4000"))
+app.listen(4000, () => console.log("Success: listening on port 4000"))

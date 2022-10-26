@@ -41,7 +41,7 @@ export default function Navigationbar({currentUser}) {
   const productCount = cart.items.reduce((sum, product) => sum + product.quantity, 0); 
   
   const checkout = async () => {
-    await fetch('https://git.heroku.com/underground-royalty-backend.git', {
+    await fetch('https://e-commerce-backend.onrender.com/checkout', {
     // await fetch('http://localhost:4000/checkout', {
       // make post request to fetch Url
       method: 'POST',

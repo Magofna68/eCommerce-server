@@ -39,7 +39,7 @@ app.post('/checkout', async (req, res) => {
   });
 
 
-  // Once session is created, going to send session to Front end via URL 
+  // Once sessions is created, going to send session to Front end via URL 
   res.send(JSON.stringify({
     url: session.url
   }));

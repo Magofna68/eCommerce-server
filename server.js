@@ -8,7 +8,7 @@ const domainUrl = "https://magofna68.github.io/eCommerce-FrontEnd";
 const app = express();
 app.use(cors({
   // origin: 'https://e-commerce-backend.onrender.com/checkout',
-  origin: 'https://magofna68.github.io/eCommerce-FrontEnd'
+  origin: 'https://magofna68.github.io/'
 }));
 app.use(express.static("public"));  //recommended by Stripe documentation
 app.use(express.json());

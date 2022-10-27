@@ -1,7 +1,8 @@
 
 const express = require('express');
 var cors = require('cors');
-const stripe = require('stripe')('sk_test_51Lv4UmKFRYyirzJ3VCUlJect3Pyb1RNVSAaZTzoO0aC4HggEPYoaw6wSXzwZmgnqzBqu67sAXsiOgMtpJiRoUwDO00UMJSTZ2w');
+const Stripe = require('stripe');
+const stripe = Stripe('sk_test_51Lv4UmKFRYyirzJ3VCUlJect3Pyb1RNVSAaZTzoO0aC4HggEPYoaw6wSXzwZmgnqzBqu67sAXsiOgMtpJiRoUwDO00UMJSTZ2w');
 
 const domainUrl = "https://magofna68.github.io/eCommerce-FrontEnd";
 const app = express();

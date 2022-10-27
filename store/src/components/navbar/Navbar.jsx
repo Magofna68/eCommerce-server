@@ -45,7 +45,7 @@ export default function Navigationbar({currentUser}) {
       // make post request to fetch Url
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
       // pass items from cart to backend -- server.js file
       body: JSON.stringify({ items: cart.items })

@@ -7,7 +7,8 @@ const stripe = Stripe('sk_test_51Lv4UmKFRYyirzJ3VCUlJect3Pyb1RNVSAaZTzoO0aC4HggE
 const domainUrl = "https://magofna68.github.io/eCommerce-FrontEnd";
 const app = express();
 app.use(cors({
-  origin: 'https://e-commerce-backend.onrender.com/checkout',
+  // origin: 'https://e-commerce-backend.onrender.com/checkout',
+  origin: 'https://magofna68.github.io/eCommerce-FrontEnd'
 }));
 app.use(express.static("public"));  //recommended by Stripe documentation
 app.use(express.json());

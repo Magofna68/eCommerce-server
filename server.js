@@ -4,19 +4,30 @@ var cors = require('cors');
 const Stripe = require('stripe');
 const stripe = Stripe('sk_test_51Lv4UmKFRYyirzJ3VCUlJect3Pyb1RNVSAaZTzoO0aC4HggEPYoaw6wSXzwZmgnqzBqu67sAXsiOgMtpJiRoUwDO00UMJSTZ2w');
 
-const domainUrl = "https://magofna68.github.io/eCommerce-FrontEnd";
+const domainUrl = "https://magofna68.github.io/eCommerce-FrontEnd/";
 const app = express();
 app.use(cors({
-  // origin: 'https://e-commerce-backend.onrender.com/checkout',
-  origin: 'https://magofna68.github.io/'
+  // origin: 'https://e-commerce-backend.onrender.com',
+  // origin: 'https://magofna68.github.io/'
+  origin: 'http://localhost:3000/'
 }));
 app.use(express.static("public"));  //recommended by Stripe documentation
 app.use(express.json());
 
+
+
+app.get('/', (req, res) => {
+  res.send('Welcome to Stripe backend server')
+})
+
 // send POST request to /checkout Route
 app.post('/checkout', async (req, res) => {
 
-  console.log(req.body);
+// set ACAO so that any client can request resource
+  // res.set('Access-Control-Allow-Origin', '*');
+  res.set('Access-Control-Allow-Origin', 'htpp://localhost:3000/');
+
+  console.log("#Server.js", req.body);
   // items to send to POST request
   const items = req.body.items;
 
@@ -35,8 +46,10 @@ app.post('/checkout', async (req, res) => {
   const session = await stripe.checkout.sessions.create({
     line_items: lineItems,
     mode: 'payment',
-    success_url: `${domainUrl}/#/success`,
-    cancel_url: `${domainUrl}/#/cancel`,
+    // success_url: `${domainUrl}/#/success`,
+    // cancel_url: `${domainUrl}/#/cancel`,
+    cancel_url: 'http://localhost:3000',
+    success_url: 'http://localhost:3000',
   });
 
 

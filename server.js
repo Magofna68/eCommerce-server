@@ -45,9 +45,9 @@ app.post('/checkout', async (req, res) => {
     line_items: lineItems,
     mode: 'payment',
     // success_url: `${domainUrl}/#/success`,
-    cancel_url: `${domainUrl}/#/cancel`,
-    // cancel_url: 'http://localhost:3000',
-    success_url: 'http://localhost:3000/#/success',
+    // cancel_url: `${domainUrl}/#/cancel`,
+    cancel_url: 'http://localhost:3001/#/cancel',
+    success_url: 'http://localhost:3001/#/success',
   });
 
 

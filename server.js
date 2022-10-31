@@ -4,7 +4,7 @@ var cors = require('cors');
 // const Stripe = require('stripe');
 const stripe = require('stripe')('sk_test_51Lv4UmKFRYyirzJ3VCUlJect3Pyb1RNVSAaZTzoO0aC4HggEPYoaw6wSXzwZmgnqzBqu67sAXsiOgMtpJiRoUwDO00UMJSTZ2w');
 
-const domainUrl = "http://magofna68.github.io/eCommerce-FrontEnd/";
+const domainUrl = "http://magofna68.github.io/eCommerce-front-end/";
 const app = express();
 app.use(cors({
   // origin: 'https://e-commerce-backend.onrender.com',
@@ -44,8 +44,8 @@ app.post('/checkout', async (req, res) => {
   const session = await stripe.checkout.sessions.create({
     line_items: lineItems,
     mode: 'payment',
-    success_url: `${domainUrl}/#/success`,
-    cancel_url: `${domainUrl}/#/cancel`,
+    success_url: `${domainUrl}#/success`,
+    cancel_url: `${domainUrl}#/cancel`,
     // cancel_url: 'http://localhost:3001/#/cancel',
     // success_url: 'http://localhost:3001/#/success',
   });
